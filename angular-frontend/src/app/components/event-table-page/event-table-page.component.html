@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <div class="row py-2">
+    <div class="col-4">
+      <h1>LESTAT Event Creation <span *ngIf="event_suggestion">(Event Suggestion)</span></h1>
+    </div>
+    <div class="col-4 offset-4">
+      <app-schema-details
+        [schema_id]="schema_id"
+        [schema_name]="schema_name"
+        [schema_dscpt]="schema_dscpt"
+        (updateSchemaDetails)="updateSchemaDetails($event)"
+      ></app-schema-details>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="event_suggestion">
+    <div class="col-4 offset-8">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios1"
+          value="linear"
+          [(ngModel)]="schema_suggestion"
+        />
+        <label class="form-check-label" for="exampleRadios1"> linear </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios1"
+          value="nonlinear"
+          [(ngModel)]="schema_suggestion"
+        />
+        <label class="form-check-label" for="exampleRadios1"> non-linear </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="row">
+        <div class="col-2">
+          <button type="button" class="btn btn-outline-dark btn-sm my-2" (click)="redirectToSchemaLoader()">
+            Load Saved Schema
+          </button>
+        </div>
+        <div class="col-3 d-flex align-items-center">
+          <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#linking_popup">
+            + Wikidata
+          </button>
+          <span class="ml-2">to created events(s)</span>
+        </div>
+      </div>
+
+      <div class="container-fluid px-0">
+        <app-event-table
+          [schema_suggestion]="schema_suggestion"
+          [hasSchemaDetails]="schema_dscpt && schema_name"
+          (pushEvent)="pushEvent($event)"
+          (filterQnodes)="filterQnodes()"
+        ></app-event-table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="d-flex col-2 offset-10 justify-content-end py-2 fixed-bottom">
+      <button (click)="onClickNext()" type="button" class="btn btn-secondary btn-sm">
+        Slotting and Ordering <span class="material-icons btn text-white lestat-icon py-1 px-1">east</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-linking-popup [selectors]="eventSelectors"></app-linking-popup>

@@ -1,0 +1,40 @@
+td {
+  padding: 5px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  text-align: left;
+}
+
+.arg-unit {
+  list-style-type: none;
+}
+
+.table-arg {
+  border-bottom: 1px solid #ddd;
+}
+
+#delete-slot {
+  color: #aaa;
+  float: right;
+  font-weight: bold;
+}
+
+#delete-slot:hover,
+#delete-slot:focus {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#edit-slot {
+  padding-right: 5px;
+  color: rgb(177, 158, 54);
+  float: right;
+  font-weight: bold;
+}
+
+#edit-slot:hover,
+#edit-slot:focus {
+  color: rgb(156, 137, 26);
+  cursor: pointer;
+  text-decoration: none;
+}

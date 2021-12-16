@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row py-2">
+    <div class="col-4">
+      <h1>Saved Schemas</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="input-group mb-3">
+        <input
+          [(ngModel)]="schemaSearchQuery"
+          type="text"
+          class="form-control"
+          placeholder="Enter search query"
+          aria-label="Enter search query"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-hover table-fixed">
+          <thead class="bg-dark text-light">
+            <tr class="d-flex">
+              <th scope="col" class="col-1"></th>
+              <th scope="col" class="col-2 fit-in-rows">Schema ID</th>
+              <th scope="col" class="col-2 fit-in-rows">Schema Name</th>
+              <th scope="col" class="col-3 fit-in-rows">Schema Description</th>
+              <th scope="col" class="col-1 fit-in-rows">Creation Date</th>
+              <th scope="col" class="col-2 fit-in-rows">Schema Filename</th>
+              <th scope="col" class="col-1 fit-in-rows">Event Recs</th>
+            </tr>
+          </thead>
+
+          <tbody class="load-table-body">
+            <ng-container *ngFor="let schema of savedSchemas">
+              <tr *ngIf="relevantSearchQuery(schema)" class="d-flex">
+                <td class="col-1">
+                  <input
+                    type="radio"
+                    name="selected-schema"
+                    value="{{ schema['file'] }}"
+                    [(ngModel)]="selectedSchema"
+                  />
+                </td>
+                <td class="col-2 fit-in-rows">{{ schema["schema_id"] }}</td>
+                <td class="col-2 fit-in-rows">{{ schema["schema_name"] }}</td>
+                <td class="col-3 fit-in-rows">{{ schema["schema_dscpt"] }}</td>
+                <td class="col-1 fit-in-rows">{{ schema["timestamp"] }}</td>
+                <td class="col-2 fit-in-rows">{{ schema["file"] }}</td>
+                <td class="col-1 fit-in-rows">
+                  <ng-container *ngIf="schema['augmentation_flag']; else showFalse">
+                    <div id="available-text">Available</div>
+                  </ng-container>
+                  <ng-template #showFalse>
+                    <div id="not-available-text">Not Available</div>
+                  </ng-template>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="d-flex justify-content-center col-4 offset-4">
+      <button type="button" class="btn btn-sm btn-secondary mx-2" (click)="redirectToEventTable()">Cancel</button>
+      <button type="button" class="btn btn-sm btn-success mx-2" (click)="getSchema()">Load</button>
+    </div>
+  </div>
+</div>

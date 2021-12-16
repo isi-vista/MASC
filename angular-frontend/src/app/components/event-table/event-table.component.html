@@ -1,0 +1,82 @@
+<div>
+  <div class="row h-100">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="bg-dark text-light">
+            <tr class="d-flex">
+              <th scope="col" class="col">Event (double click to edit)</th>
+              <th scope="col" class="col-4">Event Primitive</th>
+              <th scope="col" class="col-2">Required</th>
+              <th scope="col" class="col-1">Delete</th>
+              <th scope="col" class="col-2" *ngIf="schema_suggestion === 'nonlinear'">Event Suggestion</th>
+            </tr>
+          </thead>
+
+          <tbody
+            cdkDropList
+            (cdkDropListDropped)="drop($event)"
+            class="table-body"
+            [ngClass]="{ suggest: schema_suggestion === 'nonlinear' }"
+          >
+            <tr
+              *ngFor="let event of events"
+              cdkDrag
+              cdkDragLockAxis="y"
+              app-event-item
+              [event]="event"
+              [primitives]="primitives"
+              (deleteEvent)="deleteEvent($event)"
+              class="d-flex"
+            ></tr>
+          </tbody>
+          <div id="suggest" *ngIf="schema_suggestion === 'nonlinear' && events?.length > 0">
+            <button (click)="onSuggest()" type="button" class="btn btn-dark btn-sm">Suggest</button>
+          </div>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h4 class="text-center">
+        Hint: You can reorder events by clicking on them and dragging them to the desired position.
+      </h4>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="!event_suggestion">
+    <div class="col-6 offset-3">
+      <form (ngSubmit)="addEvent()">
+        <input class="w-75" type="text" name="input_text" [(ngModel)]="input_text" placeholder="Enter event here" />
+        <input class="w-25" type="submit" value="Add Event" />
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div id="event-suggestions" *ngIf="event_suggestion">
+        <app-event-suggestion [(suggest)]="suggest"></app-event-suggestion>
+      </div>
+    </div>
+
+    <div class="col-6 offset-3" *ngIf="event_suggestion">
+      <div class="text-center" *ngIf="!hasSchemaDetails">
+        <h4>Please enter a schema name and description.</h4>
+      </div>
+      <form (ngSubmit)="addEvent()">
+        <input
+          class="w-75"
+          type="text"
+          name="input_text"
+          [disabled]="!hasSchemaDetails || data_loading"
+          [(ngModel)]="input_text"
+          placeholder="Enter event here"
+        />
+        <input class="w-25" [disabled]="!hasSchemaDetails || data_loading" type="submit" value="Add Event" />
+      </form>
+    </div>
+  </div>
+</div>

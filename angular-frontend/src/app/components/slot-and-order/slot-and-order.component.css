@@ -1,0 +1,27 @@
+#graph {
+  height: 60vh;
+  border: 1px solid #888;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.recenter {
+  position: relative;
+  top: -50px;
+}
+
+.slotting-table-body-sm {
+  display: block;
+  height: 45vh;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.slotting-table-body-lg {
+  display: block;
+  height: 78vh;
+  max-height: 78vh;
+  overflow-y: auto;
+}

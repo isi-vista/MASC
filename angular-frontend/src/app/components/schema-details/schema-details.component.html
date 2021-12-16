@@ -1,0 +1,100 @@
+<div class="card text-white bg-info">
+  <div class="row px-2 pt-2">
+    <div class="col-3"><strong>ID:</strong></div>
+    <div class="col-8">{{ schema_id }}</div>
+    <div class="col-1">
+      <span
+        class="material-icons btn text-white px-0 py-0"
+        style="font-size: 15px"
+        data-toggle="modal"
+        data-target="#editSchemaPopup"
+        (click)="startEditingDetails()"
+        >edit</span
+      >
+    </div>
+  </div>
+  <div class="row px-2 py-1">
+    <div class="col-3"><strong>Name:</strong></div>
+    <div class="col-9">{{ schema_name }}</div>
+  </div>
+  <div class="row px-2 pb-2">
+    <div class="col-3"><strong>Description:</strong></div>
+    <div class="col-9">
+      <p class="my-0" style="white-space: nowrap !important; overflow: hidden; text-overflow: ellipsis">
+        {{ schema_dscpt }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div
+  id="editSchemaPopup"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <form>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Edit Schema Details</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              name="schema_id"
+              pattern="^\S+$"
+              placeholder="Enter schema id here"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm"
+              [(ngModel)]="schema_id_temp"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              name="schema_name"
+              placeholder="Enter schema name here"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm"
+              [(ngModel)]="schema_name_temp"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+            </div>
+            <textarea
+              type="text"
+              class="form-control"
+              name="schema_dscpt"
+              placeholder="Enter schema description here"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm"
+              [(ngModel)]="schema_dscpt_temp"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" (click)="saveChanges()" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

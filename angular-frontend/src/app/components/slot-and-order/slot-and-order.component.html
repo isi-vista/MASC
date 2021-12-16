@@ -1,0 +1,409 @@
+<div>
+  <div class="container-fluid">
+    <div class="row py-2">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-12">
+            <h1>Slotting and Ordering</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button
+              type="button"
+              (click)="eventSelectedForArg()"
+              class="btn btn-warning btn-sm"
+              data-toggle="modal"
+              data-target="#commonArgPopup"
+            >
+              + argument(s)
+            </button>
+            to selected event(s)
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#linking_popup">
+              + Wikidata
+            </button>
+            to created argument(s)
+          </div>
+        </div>
+      </div>
+      <div class="col-4 offset-4">
+        <app-schema-details
+          [schema_id]="schema_id"
+          [schema_name]="schema_name"
+          [schema_dscpt]="schema_dscpt"
+          (updateSchemaDetails)="updateSchemaDetails($event)"
+        ></app-schema-details>
+      </div>
+    </div>
+
+    <div class="full-screen">
+      <div class="row">
+        <div class="col-6">
+          <div class="table-responsive">
+            <table class="table table-hover table-fixed">
+              <thead class="bg-dark text-light">
+                <tr class="d-flex">
+                  <td scope="col" class="col-1"></td>
+                  <td scope="col" class="col-2">Event ID</td>
+                  <td scope="col" class="col-6">Event</td>
+                  <td scope="col" class="col-3">Arguments</td>
+                </tr>
+              </thead>
+
+              <tbody id="slotting-table-body" class="table-body slotting-table-body-sm">
+                <tr
+                  *ngFor="let event of events; let i = index"
+                  app-slotting-item
+                  [event]="event"
+                  [event_index]="i"
+                  (slotChange)="checkRefvar($event)"
+                  class="d-flex"
+                ></tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="rec_events.length > 0">
+            <hr class="border border-dark w-50" />
+            <div class="bottom-row">
+              <h3>Event recommendations</h3>
+              <app-eventrec-table
+                [events]="events"
+                [rec_events]="rec_events"
+                [primitives]="primitives"
+                [node_ct]="node_ct"
+                [nodes]="nodes"
+                [links]="links"
+                (addNode)="addNode($event)"
+              ></app-eventrec-table>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="graph">
+            <ngx-graph
+              class="chart-container"
+              [center$]="center$"
+              [zoomToFit$]="zoomToFit$"
+              [update$]="update$"
+              [links]="links"
+              [nodes]="nodes"
+              layout="dagreCluster"
+            >
+              <ng-template #defsTemplate>
+                <svg:marker
+                  id="arrow"
+                  viewBox="0 -5 10 10"
+                  refX="8"
+                  refY="0"
+                  markerWidth="4"
+                  markerHeight="4"
+                  orient="auto"
+                >
+                  <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+                </svg:marker>
+              </ng-template>
+
+              <ng-template #clusterTemplate let-cluster>
+                <svg:g
+                  class="node cluster"
+                  ngx-tooltip
+                  [tooltipPlacement]="'top'"
+                  [tooltipType]="'tooltip'"
+                  [tooltipTitle]="cluster.label"
+                >
+                  <svg:rect
+                    rx="5"
+                    ry="5"
+                    [attr.width]="cluster.dimension.width"
+                    [attr.height]="cluster.dimension.height"
+                    [attr.fill]="cluster.data.color"
+                  />
+                </svg:g>
+              </ng-template>
+
+              <ng-template #nodeTemplate let-node>
+                <svg:g
+                  class="node"
+                  ngx-tooltip
+                  [tooltipPlacement]="'top'"
+                  [tooltipType]="'tooltip'"
+                  [tooltipTitle]="node.label"
+                >
+                  <svg:rect
+                    [attr.width]="node.dimension.width"
+                    [attr.height]="node.dimension.height"
+                    [attr.fill]="node.data.color"
+                  />
+                  <svg:text
+                    alignment-baseline="central"
+                    [attr.x]="10"
+                    [attr.y]="node.dimension.height / 1.5"
+                    fill="black"
+                  >
+                    {{ node.label }}
+                  </svg:text>
+                </svg:g>
+              </ng-template>
+
+              <ng-template #linkTemplate let-link>
+                <svg:g class="edge">
+                  <svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
+                  <svg:text class="edge-label" text-anchor="middle">
+                    <textPath
+                      class="text-path"
+                      [attr.href]="'#' + link.id"
+                      [style.dominant-baseline]="link.dominantBaseline"
+                      startOffset="50%"
+                    >
+                      {{ link.label }}
+                    </textPath>
+                  </svg:text>
+                </svg:g>
+              </ng-template>
+            </ngx-graph>
+            <span class="material-icons btn recenter" style="font-size: 25px" (click)="recenterGraph()"
+              >my_location</span
+            >
+          </div>
+          <hr class="border border-dark w-50" />
+          <h3>Event ordering</h3>
+          <div class="bottom-row">
+            <div class="card bg-white mb-2">
+              <div class="card-body">
+                <div class="card-text">
+                  <div class="row">
+                    <div class="col-9">
+                      Anchor event
+                      <select [(ngModel)]="anchor_id_num">
+                        <option *ngFor="let e of events" value="{{ e.id_num }}">{{ e.id }}</option>
+                      </select>
+                      is
+                      <select [(ngModel)]="mselect_order">
+                        <option value="precede" selected>After</option>
+                        <option value="succeed" selected>Before</option>
+                      </select>
+                      selected event(s)
+                    </div>
+                    <div class="col-3">
+                      <button class="btn btn-outline-secondary btn-sm" type="button" (click)="addEdges()">
+                        + edges
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-white">
+              <div class="card-body">
+                <div class="card-text">
+                  <div class="row">
+                    <div class="col-9 align-middle">
+                      Before:
+                      <select [(ngModel)]="source_idx">
+                        <option *ngFor="let node of nodes; let i = index" value="{{ i }}">{{ node.label }}</option>
+                      </select>
+                      <span class="material-icons align-bottom"> arrow_right_alt </span>
+                      After:
+                      <select [(ngModel)]="dest_idx">
+                        <option *ngFor="let node of nodes; let i = index" value="{{ i }}">{{ node.label }}</option>
+                      </select>
+                    </div>
+                    <div class="col-3 align-middle">
+                      <button type="button" (click)="addEdge()" class="btn btn-outline-secondary btn-sm mr-1">
+                        + edge
+                      </button>
+                      <button type="button" (click)="removeEdge()" class="btn btn-outline-secondary btn-sm ml-1">
+                        - edge
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row fixed-bottom w-100 py-2 px-4">
+      <div class="d-flex col-4 justify-content-start">
+        <button type="button" class="btn btn-secondary btn-sm my-2" (click)="onCLickBack()">
+          <span class="material-icons btn text-white py-0 px-0" style="font-size: 15px">west</span>Event Creation
+        </button>
+      </div>
+      <div class="d-flex col-4 justify-content-center">
+        <button type="button" class="btn btn-primary btn-sm my-2" data-toggle="modal" data-target="#submitForm">
+          Submit schema
+        </button>
+      </div>
+      <div class="d-flex col-4 justify-content-end"></div>
+    </div>
+  </div>
+
+  <app-linking-popup [selectors]="refvarSelectors"></app-linking-popup>
+
+  <!-- Submit Form Modal -->
+  <div
+    class="modal fade"
+    id="submitForm"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <form>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Submit Schema</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                name="schema_id"
+                pattern="^\S+$"
+                placeholder="Enter schema id here"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                [(ngModel)]="schema_id"
+              />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                name="schema_name"
+                placeholder="Enter schema name here"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                [(ngModel)]="schema_name"
+              />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+              </div>
+              <textarea
+                type="text"
+                class="form-control"
+                name="schema_dscpt"
+                placeholder="Enter schema description here"
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                [(ngModel)]="schema_dscpt"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="form-group">
+              <div class="custom-control custom-checkbox form-check">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="download-flag"
+                  name="downloader"
+                  [(ngModel)]="download_flag"
+                />
+                <label class="custom-control-label" for="download-flag">Download schema after submission</label>
+              </div>
+              <div class="custom-control custom-checkbox form-check">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="reset-flag"
+                  name="resetter"
+                  [(ngModel)]="reset_flag"
+                />
+                <label class="custom-control-label" for="reset-flag">Reset curator after submission</label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="submitSchema()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Common Args Popup -->
+  <div
+    *ngIf="showCommonArgs"
+    #c_arg_popup
+    class="modal fade"
+    id="commonArgPopup"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <form>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Add argument roles</div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <div *ngFor="let event of events">
+                <ng-container *ngIf="event.is_checked">
+                  <app-arg-select [event]="event"></app-arg-select>
+                </ng-container>
+              </div>
+            </div>
+
+            <div *ngIf="rolesFilled(); else showFillMessage" class="form-group">
+              <label for="refvar-name">Refvar Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="refvar-name"
+                name="refvar-name"
+                [(ngModel)]="refvar_name"
+                placeholder="Enter refvar name here"
+              />
+              <label for="common-constraints">Select constraints to assign</label>
+              <select
+                id="common-constraints"
+                name="common-constraints"
+                multiple
+                class="form-control"
+                [(ngModel)]="constraints"
+                multiple="multiple"
+              >
+                <Option *ngFor="let constraint of getCommonConstraints()" value="{{ constraint }}"
+                  >{{ constraint }}
+                </Option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <ng-template #showFillMessage> Select roles for all arguments to proceed </ng-template>
+              <button
+                *ngIf="rolesFilled()"
+                (click)="addArg()"
+                type="button"
+                class="btn btn-primary btn-sm"
+                data-dismiss="modal"
+              >
+                Add Argument(s)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

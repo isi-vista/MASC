@@ -1,0 +1,81 @@
+<div #linking_popup id="linking_popup" class="modal fade" tabindex="-1" role="dialog">
+  <form>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">
+            <h2>Select a Wikidata qnode, if applicable.</h2>
+          </div>
+          <button type="button" (click)="onClose(false)" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="selectors.length == 0; else showSelections">Please input event/refvar to perform linking.</div>
+          <ng-template #showSelections>
+            <div class="form-group">
+              <div *ngFor="let selector of selectors">
+                <div>{{ selector.query }}</div>
+                <div *ngIf="selector.options.length == 0; else showOptions">No candidates found</div>
+                <ng-template #showOptions>
+                  <div *ngFor="let option of selector.options">
+                    <div
+                      *ngIf="
+                        option.rawName.length + option.definition.length + option.qnode.length <= 85;
+                        else truncateDescription
+                      "
+                    >
+                      <div class="form-check">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="{{ selector.query }}"
+                          [value]="option.qnode"
+                          [(ngModel)]="selector.selectedQnode"
+                        />
+                        <label for="{{ option.rawName }}" class="form-check-label">
+                          {{ option.rawName }}
+                          <span *ngIf="option.definition != ''">: </span>
+                          {{ option.definition }}
+                          <span *ngIf="option.qnode != ''">
+                            (<a target="_blank" href="https://www.wikidata.org/wiki/{{ option.qnode }}">{{
+                              option.qnode
+                            }}</a
+                            >)
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <ng-template #truncateDescription>
+                      <input
+                        type="radio"
+                        name="{{ selector.query }}"
+                        [value]="option.qnode"
+                        [(ngModel)]="selector.selectedQnode"
+                      />
+                      <label for="{{ option.rawName }}">
+                        {{ option.rawName }}
+                        {{
+                          ": " + option.definition.substr(0, 82 - (option.rawName.length + option.qnode.length)) + "..."
+                        }}
+                        <span *ngIf="option.qnode != ''">
+                          (<a target="_blank" href="https://www.wikidata.org/wiki/{{ option.qnode }}">{{
+                            option.qnode
+                          }}</a
+                          >)
+                        </span>
+                      </label>
+                    </ng-template>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" (click)="onClose(true)" data-dismiss="modal">Save Links</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

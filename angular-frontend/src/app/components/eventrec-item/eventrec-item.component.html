@@ -1,0 +1,34 @@
+<td class="col-4">
+  {{ event.event_text }}
+</td>
+<td class="col-4">
+  <div *ngIf="event.event_primitive == null; else showPrimitive">
+    <div id="primitive-selection">
+      <div *ngFor="let primitive of recommendations">
+        <input
+          type="radio"
+          name="{{ event.id_num }}"
+          value="{{ primitive.type }}"
+          [(ngModel)]="event.event_primitive"
+        />
+        <label for="{{ primitive.type }}" title="{{ primitive.description }}"> {{ primitive.type }} </label><br />
+      </div>
+      <select [(ngModel)]="event.event_primitive">
+        <option value="null" disabled selected>Other (Select)</option>
+        <option *ngFor="let p of primitives" value="{{ p.type }}" title="{{ p.description }}">{{ p.type }}</option>
+      </select>
+    </div>
+  </div>
+  <ng-template #showPrimitive>
+    {{ event.event_primitive }} <span id="close-popup" (click)="deselectPrimitive()">&times;</span>
+  </ng-template>
+</td>
+<td class="col-1">
+  <input [(ngModel)]="event.required" type="checkbox" name="requirement_constraint" />
+</td>
+<td class="col-3">
+  <button (click)="onAddEventRec(event, false)" class="btn btn-light btn-sm">Add Event</button>
+  <div *ngIf="event.after != 'DNE'">
+    <button (click)="onAddEventRec(event, true)" class="btn btn-light btn-sm">Add after {{ event.after }}</button>
+  </div>
+</td>

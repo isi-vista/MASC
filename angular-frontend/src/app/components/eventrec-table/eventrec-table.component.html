@@ -1,0 +1,23 @@
+<div class="table-responsive rec-table">
+  <table class="table table-hover table-fixed">
+    <thead class="bg-secondary text-light">
+      <tr class="d-flex">
+        <td class="col-4">Event</td>
+        <td class="col-4">Event Primitive</td>
+        <td class="col-1">Required</td>
+        <td class="col-3">Add Event</td>
+      </tr>
+    </thead>
+
+    <tbody class="table-body rec-table-body">
+      <tr
+        *ngFor="let event of event_recs"
+        app-eventrec-item
+        [event]="event"
+        [primitives]="primitives"
+        (addEventRec)="addEventRec($event)"
+        class="d-flex"
+      ></tr>
+    </tbody>
+  </table>
+</div>

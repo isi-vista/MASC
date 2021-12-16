@@ -1,0 +1,19 @@
+#available-text {
+  color: green;
+  font-weight: bold;
+}
+
+#not-available-text {
+  color: red;
+  font-weight: bold;
+}
+
+.load-table-body {
+  display: block;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.fit-in-rows {
+  overflow-wrap: break-word;
+}

@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+    <div class="row border border-primary">
+      <div class="col-8 offset-2">
+        <div *ngIf="recommendations?.length > 0 && !realEventTable.data_loading && !has_error">
+          <div *ngFor="let event of recommendations" class="form-check">
+            <input
+              type="radio"
+              name="event"
+              value="{{ event }}"
+              class="form-check-input"
+              (change)="selectEventSuggestion({ event_text: event })"
+            />
+            <label for="{{ event }}" title="{{ event }}" class="form-check-label"> {{ event }} </label><br />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div *ngIf="recommendations?.length <= 0 && !realEventTable.data_loading && !has_error">
+          <div class="text-center">
+            <h4>No Recommendations</h4>
+          </div>
+        </div>
+        <div *ngIf="has_error">
+          <div class="text-center">
+            <h4>Server Error!</h4>
+          </div>
+        </div>
+        <div *ngIf="realEventTable.data_loading">
+          <div class="text-center">
+            <h4>Waiting for Server...</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

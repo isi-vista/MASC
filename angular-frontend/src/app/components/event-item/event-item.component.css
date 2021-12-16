@@ -1,0 +1,16 @@
+#edit-icon {
+  width: 16px;
+  max-width: 16px;
+  height: 16px;
+  max-height: 16px;
+  margin-left: 15px;
+}
+
+#edit-icon:hover {
+  cursor: pointer;
+}
+
+.first-col {
+  overflow-x: clip;
+  white-space: pre-wrap;
+}

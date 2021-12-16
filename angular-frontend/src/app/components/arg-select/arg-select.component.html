@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label for="arg-options">{{ display_string }} </label>
+  <select [(ngModel)]="event.staged_arg" (change)="onChange()" class="form-control" id="arg-options">
+    <ng-container *ngIf="primitive != null">
+      <option value="null" selected disabled>Select Role</option>
+      <option *ngFor="let arg of primitive.args" value="{{ arg.role }}">{{ arg.role }}</option>
+    </ng-container>
+  </select>
+</div>

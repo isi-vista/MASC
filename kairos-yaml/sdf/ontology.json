@@ -1,0 +1,5516 @@
+{
+  "source_file": "KAIROS_Annotation_Tagset_Phase_1_V3.0.xlsx",
+  "events": {
+    "ArtifactExistence.DamageDestroyDisableDismantle.Damage": {
+      "id": "LDC_KAIROS_evt_001",
+      "full_type": "ArtifactExistence.DamageDestroyDisableDismantle.Damage",
+      "type": "ArtifactExistence",
+      "subtype": "DamageDestroyDisableDismantle",
+      "subsubtype": "Damage",
+      "definition": "The damaging, but not destruction, of a thing (nb: use Disable or Dismantle instead for those specific kinds of damage)",
+      "template": "<arg1> damaged <arg2> using <arg3> instrument in <arg4> place",
+      "args": {
+        "Damager": {
+          "position": "arg1",
+          "label": "Damager",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "NAT",
+            "PTH",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ArtifactExistence.DamageDestroyDisableDismantle.Destroy": {
+      "id": "LDC_KAIROS_evt_002",
+      "full_type": "ArtifactExistence.DamageDestroyDisableDismantle.Destroy",
+      "type": "ArtifactExistence",
+      "subtype": "DamageDestroyDisableDismantle",
+      "subsubtype": "Destroy",
+      "definition": "The destruction of a thing",
+      "template": "<arg1> destroyed <arg2> using <arg3> instrument in <arg4> place",
+      "args": {
+        "Destroyer": {
+          "position": "arg1",
+          "label": "Destroyer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "NAT",
+            "PTH",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ArtifactExistence.DamageDestroyDisableDismantle.DisableDefuse": {
+      "id": "LDC_KAIROS_evt_003",
+      "full_type": "ArtifactExistence.DamageDestroyDisableDismantle.DisableDefuse",
+      "type": "ArtifactExistence",
+      "subtype": "DamageDestroyDisableDismantle",
+      "subsubtype": "DisableDefuse",
+      "definition": "Disabling the expected functioning of a mechanical device, or software, for example defusing or removing a fuse from an explosive",
+      "template": "<arg1> disabled or defused <arg2> using <arg3> instrument in <arg4> place",
+      "args": {
+        "Disabler": {
+          "position": "arg1",
+          "label": "Disabler",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "ABS",
+            "COM",
+            "FAC",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ArtifactExistence.DamageDestroyDisableDismantle.Dismantle": {
+      "id": "LDC_KAIROS_evt_004",
+      "full_type": "ArtifactExistence.DamageDestroyDisableDismantle.Dismantle",
+      "type": "ArtifactExistence",
+      "subtype": "DamageDestroyDisableDismantle",
+      "subsubtype": "Dismantle",
+      "definition": "Disassembling an artifact in such a way that it could be reassembled",
+      "template": "<arg1> dismantled <arg2> using <arg3> instrument into <arg4> components in <arg5> place",
+      "args": {
+        "Dismantler": {
+          "position": "arg1",
+          "label": "Dismantler",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "COM",
+            "FAC",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH"
+          ]
+        },
+        "Components": {
+          "position": "arg4",
+          "label": "Components",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ArtifactExistence.DamageDestroyDisableDismantle.Unspecified": {
+      "id": "LDC_KAIROS_evt_005",
+      "full_type": "ArtifactExistence.DamageDestroyDisableDismantle.Unspecified",
+      "type": "ArtifactExistence",
+      "subtype": "DamageDestroyDisableDismantle",
+      "subsubtype": "Unspecified",
+      "definition": "The damaging or destruction of a thing",
+      "template": "<arg1> damaged or destroyed <arg2> using <arg3> instrument in <arg4> place",
+      "args": {
+        "DamagerDestroyer": {
+          "position": "arg1",
+          "label": "DamagerDestroyer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "NAT",
+            "PTH",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ArtifactExistence.ManufactureAssemble.Unspecified": {
+      "id": "LDC_KAIROS_evt_006",
+      "full_type": "ArtifactExistence.ManufactureAssemble.Unspecified",
+      "type": "ArtifactExistence",
+      "subtype": "ManufactureAssemble",
+      "subsubtype": "Unspecified",
+      "definition": "Physical action of building, assembling, manufacturing, putting things together, mixing, etc. (does not include the creation of intellectual property)",
+      "template": "<arg1> manufactured or assembled or produced <arg2> from <arg3> components using <arg4> at <arg5> place",
+      "args": {
+        "ManufacturerAssembler": {
+          "position": "arg1",
+          "label": "ManufacturerAssembler",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Artifact": {
+          "position": "arg2",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "MON",
+            "VEH",
+            "WEA",
+            "PTH"
+          ]
+        },
+        "Components": {
+          "position": "arg3",
+          "label": "Components",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA",
+            "PTH"
+          ]
+        },
+        "Instrument": {
+          "position": "arg4",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "INF"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Cognitive.IdentifyCategorize.Unspecified": {
+      "id": "LDC_KAIROS_evt_007",
+      "full_type": "Cognitive.IdentifyCategorize.Unspecified",
+      "type": "Cognitive",
+      "subtype": "IdentifyCategorize",
+      "subsubtype": "Unspecified",
+      "definition": "The act of establishing the identity of an entity or event, or establishing the relevant category that an entity or event belongs to, such as being a suspect or a target or an attack",
+      "template": "<arg1> identified <arg2> as <arg3> at <arg4> place",
+      "args": {
+        "Identifier": {
+          "position": "arg1",
+          "label": "Identifier",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "IdentifiedObject": {
+          "position": "arg2",
+          "label": "IdentifiedObject",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "IdentifiedRole": {
+          "position": "arg3",
+          "label": "IdentifiedRole",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Cognitive.Inspection.SensoryObserve": {
+      "id": "LDC_KAIROS_evt_008",
+      "full_type": "Cognitive.Inspection.SensoryObserve",
+      "type": "Cognitive",
+      "subtype": "Inspection",
+      "subsubtype": "SensoryObserve",
+      "definition": "An observation or inspection event, with any target of inspection",
+      "template": "<arg1> observed <arg2> using <arg3> in <arg4> place",
+      "args": {
+        "Observer": {
+          "position": "arg1",
+          "label": "Observer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "ObservedEntity": {
+          "position": "arg2",
+          "label": "ObservedEntity",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "COM",
+            "VEH",
+            "WEA",
+            "FAC",
+            "BAL",
+            "MON",
+            "MHI",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH",
+            "EVENT"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Cognitive.Research.Unspecified": {
+      "id": "LDC_KAIROS_evt_009",
+      "full_type": "Cognitive.Research.Unspecified",
+      "type": "Cognitive",
+      "subtype": "Research",
+      "subsubtype": "Unspecified",
+      "definition": "Explicit mention of researching the answer to a question by analyzing literature or testing hypotheses through experiments or reviewing opinions from experts in a field",
+      "template": "<arg1> researched <arg2> subject using <arg3> at <arg4> place",
+      "args": {
+        "Researcher": {
+          "position": "arg1",
+          "label": "Researcher",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Subject": {
+          "position": "arg2",
+          "label": "Subject",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Means": {
+          "position": "arg3",
+          "label": "Means",
+          "constraints": [
+            "EVENT",
+            "ABS",
+            "INF",
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Cognitive.TeachingTrainingLearning.Unspecified": {
+      "id": "LDC_KAIROS_evt_010",
+      "full_type": "Cognitive.TeachingTrainingLearning.Unspecified",
+      "type": "Cognitive",
+      "subtype": "TeachingTrainingLearning",
+      "subsubtype": "Unspecified",
+      "definition": "The action of teaching a person or animal a particular skill or type of behavior, where the learner does not have complete mastery of the skill until the end",
+      "template": "<arg1> taught <arg2> field of knowledge to <arg3> using <arg4> at <arg5> institution in <arg6> place",
+      "args": {
+        "TeacherTrainer": {
+          "position": "arg1",
+          "label": "TeacherTrainer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "AML"
+          ]
+        },
+        "FieldOfKnowledge": {
+          "position": "arg2",
+          "label": "FieldOfKnowledge",
+          "constraints": [
+            "INF"
+          ]
+        },
+        "Learner": {
+          "position": "arg3",
+          "label": "Learner",
+          "constraints": [
+            "PER",
+            "ORG",
+            "COM",
+            "AML",
+            "ABS"
+          ]
+        },
+        "Means": {
+          "position": "arg4",
+          "label": "Means",
+          "constraints": [
+            "COM",
+            "ABS",
+            "INF"
+          ]
+        },
+        "Institution": {
+          "position": "arg5",
+          "label": "Institution",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Place": {
+          "position": "arg6",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Conflict.Attack.DetonateExplode": {
+      "id": "LDC_KAIROS_evt_011",
+      "full_type": "Conflict.Attack.DetonateExplode",
+      "type": "Conflict",
+      "subtype": "Attack",
+      "subsubtype": "DetonateExplode",
+      "definition": "Exploding a device intentionally, as an assault on a person or for physical damage, for the purposes of attack (including bombings)",
+      "template": "<arg1> detonated or exploded <arg4> explosive device using <arg3> to attack <arg2> target at <arg5> place",
+      "args": {
+        "Attacker": {
+          "position": "arg1",
+          "label": "Attacker",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Target": {
+          "position": "arg2",
+          "label": "Target",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "PER",
+            "COM",
+            "VEH",
+            "WEA",
+            "SID",
+            "AML",
+            "PLA",
+            "NAT"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "WEA",
+            "COM"
+          ]
+        },
+        "ExplosiveDevice": {
+          "position": "arg4",
+          "label": "ExplosiveDevice",
+          "constraints": [
+            "WEA",
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Conflict.Attack.Unspecified": {
+      "id": "LDC_KAIROS_evt_012",
+      "full_type": "Conflict.Attack.Unspecified",
+      "type": "Conflict",
+      "subtype": "Attack",
+      "subsubtype": "Unspecified",
+      "definition": "An attack event, a violent physical act causing harm or damage",
+      "template": "<arg1> attacked <arg2> using <arg3> at <arg4> place",
+      "args": {
+        "Attacker": {
+          "position": "arg1",
+          "label": "Attacker",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "Target": {
+          "position": "arg2",
+          "label": "Target",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "PER",
+            "COM",
+            "VEH",
+            "WEA",
+            "SID",
+            "AML",
+            "PLA",
+            "NAT"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Conflict.Defeat.Unspecified": {
+      "id": "LDC_KAIROS_evt_013",
+      "full_type": "Conflict.Defeat.Unspecified",
+      "type": "Conflict",
+      "subtype": "Defeat",
+      "subsubtype": "Unspecified",
+      "definition": "Defeat in a conflict or an election, but not a game-style competition",
+      "template": "<arg1> defeated <arg2> in <arg3> conflict at <arg4> place",
+      "args": {
+        "Victor": {
+          "position": "arg1",
+          "label": "Victor",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "Defeated": {
+          "position": "arg2",
+          "label": "Defeated",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "ConflictOrElection": {
+          "position": "arg3",
+          "label": "ConflictOrElection",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Conflict.Demonstrate.DemonstrateWithViolence": {
+      "id": "LDC_KAIROS_evt_014",
+      "full_type": "Conflict.Demonstrate.DemonstrateWithViolence",
+      "type": "Conflict",
+      "subtype": "Demonstrate",
+      "subsubtype": "DemonstrateWithViolence",
+      "definition": "A demonstration, march, protest, riot, or political gathering that includes violent acts by any participant (including police)",
+      "template": "<arg1> was in a demonstration involving violence for <arg4> topic with <arg3> visual display against <arg5> at <arg6> place, with potential involvement of <arg2> police or military",
+      "args": {
+        "Demonstrator": {
+          "position": "arg1",
+          "label": "Demonstrator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "SID"
+          ]
+        },
+        "Regulator": {
+          "position": "arg2",
+          "label": "Regulator",
+          "constraints": [
+            "PER",
+            "ORG"
+          ]
+        },
+        "VisualDisplay": {
+          "position": "arg3",
+          "label": "VisualDisplay",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Target": {
+          "position": "arg5",
+          "label": "Target",
+          "constraints": [
+            "ORG",
+            "PER",
+            "GPE"
+          ]
+        },
+        "Place": {
+          "position": "arg6",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Conflict.Demonstrate.Unspecified": {
+      "id": "LDC_KAIROS_evt_015",
+      "full_type": "Conflict.Demonstrate.Unspecified",
+      "type": "Conflict",
+      "subtype": "Demonstrate",
+      "subsubtype": "Unspecified",
+      "definition": "A demonstration, march, protest, or political gathering",
+      "template": "<arg1> was in a demonstration for <arg4> topic with <arg3> visual display against <arg5> at <arg6> place, with potential involvement of <arg2> police or military",
+      "args": {
+        "Demonstrator": {
+          "position": "arg1",
+          "label": "Demonstrator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "SID"
+          ]
+        },
+        "Regulator": {
+          "position": "arg2",
+          "label": "Regulator",
+          "constraints": [
+            "PER",
+            "ORG"
+          ]
+        },
+        "VisualDisplay": {
+          "position": "arg3",
+          "label": "VisualDisplay",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Target": {
+          "position": "arg5",
+          "label": "Target",
+          "constraints": [
+            "ORG",
+            "PER",
+            "GPE"
+          ]
+        },
+        "Place": {
+          "position": "arg6",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Contact.Broadcast": {
+      "id": "LDC_KAIROS_evt_016",
+      "full_type": "Contact.Contact.Broadcast",
+      "type": "Contact",
+      "subtype": "Contact",
+      "subsubtype": "Broadcast",
+      "definition": "An event where a participant(s) communicates in a one-way communication without any expectation of response",
+      "template": "<arg1> communicated to <arg2> about <arg4> topic using <arg3> at <arg5> place (one-way communication)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Contact.Correspondence": {
+      "id": "LDC_KAIROS_evt_017",
+      "full_type": "Contact.Contact.Correspondence",
+      "type": "Contact",
+      "subtype": "Contact",
+      "subsubtype": "Correspondence",
+      "definition": "An event where two or more participants communicate in a way that is not in person (e.g. email, phone, etc.)",
+      "template": "<arg1> communicated remotely with <arg2> about <arg4> topic using <arg3> at <arg5> place",
+      "args": {
+        "Participant": {
+          "position": "arg2",
+          "label": "Participant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Contact.Meet": {
+      "id": "LDC_KAIROS_evt_018",
+      "full_type": "Contact.Contact.Meet",
+      "type": "Contact",
+      "subtype": "Contact",
+      "subsubtype": "Meet",
+      "definition": "An event where two or more participants communicate in person",
+      "template": "<arg1> met face-to-face with <arg2> about <arg3> topic at <arg4> place",
+      "args": {
+        "Participant": {
+          "position": "arg2",
+          "label": "Participant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Contact.Unspecified": {
+      "id": "LDC_KAIROS_evt_019",
+      "full_type": "Contact.Contact.Unspecified",
+      "type": "Contact",
+      "subtype": "Contact",
+      "subsubtype": "Unspecified",
+      "definition": "An event where two or more participants communicate over any medium, where the context does not distinguish the nature of the contact or whether the communication is in person or remote",
+      "template": "<arg1> communicated with <arg2> about <arg3> topic at <arg4> place (document does not specify in person or not, or one-way or not)",
+      "args": {
+        "Participant": {
+          "position": "arg2",
+          "label": "Participant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Prevarication.Broadcast": {
+      "id": "LDC_KAIROS_evt_020",
+      "full_type": "Contact.Prevarication.Broadcast",
+      "type": "Contact",
+      "subtype": "Prevarication",
+      "subsubtype": "Broadcast",
+      "definition": "A one-way communication that is knowingly untrue or vague about the truth",
+      "template": "<arg1> communicated to <arg2> about <arg4> topic using <arg3> at <arg5> place (one-way communication)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Prevarication.Correspondence": {
+      "id": "LDC_KAIROS_evt_021",
+      "full_type": "Contact.Prevarication.Correspondence",
+      "type": "Contact",
+      "subtype": "Prevarication",
+      "subsubtype": "Correspondence",
+      "definition": "A two-way communication that is knowingly untrue or vague about the truth, not in person",
+      "template": "<arg1> communicated remotely with <arg2> about <arg4> topic using <arg3> at <arg5> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Prevarication.Meet": {
+      "id": "LDC_KAIROS_evt_022",
+      "full_type": "Contact.Prevarication.Meet",
+      "type": "Contact",
+      "subtype": "Prevarication",
+      "subsubtype": "Meet",
+      "definition": "A communication that is knowingly untrue or vague about the truth, made in person",
+      "template": "<arg1> met face-to-face with <arg2> about <arg3> topic at <arg4> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.Prevarication.Unspecified": {
+      "id": "LDC_KAIROS_evt_023",
+      "full_type": "Contact.Prevarication.Unspecified",
+      "type": "Contact",
+      "subtype": "Prevarication",
+      "subsubtype": "Unspecified",
+      "definition": "Any communication over any medium where the communicator intentionally deceives the addressee or continue an ongoing deception, either by knowingly conveying false information, or conveying information with the intent of the addressee drawing the wrong conclusion, or omitting information.",
+      "template": "<arg1> communicated with <arg2> about <arg3> topic at <arg4> place (document does not specify in person or not, or one-way or not)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.RequestCommand.Broadcast": {
+      "id": "LDC_KAIROS_evt_024",
+      "full_type": "Contact.RequestCommand.Broadcast",
+      "type": "Contact",
+      "subtype": "RequestCommand",
+      "subsubtype": "Broadcast",
+      "definition": "A statement making a request, appeal, command, or order via one-way communication",
+      "template": "<arg1> communicated to <arg2> about <arg4> topic using <arg3> at <arg5> place (one-way communication)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.RequestCommand.Correspondence": {
+      "id": "LDC_KAIROS_evt_025",
+      "full_type": "Contact.RequestCommand.Correspondence",
+      "type": "Contact",
+      "subtype": "RequestCommand",
+      "subsubtype": "Correspondence",
+      "definition": "A statement making a request, appeal, command, or order via two-way communication, not in person",
+      "template": "<arg1> communicated remotely with <arg2> about <arg4> topic using <arg3> at <arg5> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.RequestCommand.Meet": {
+      "id": "LDC_KAIROS_evt_026",
+      "full_type": "Contact.RequestCommand.Meet",
+      "type": "Contact",
+      "subtype": "RequestCommand",
+      "subsubtype": "Meet",
+      "definition": "A statement making a request, appeal, command, or order made in person",
+      "template": "<arg1> met face-to-face with <arg2> about <arg3> topic at <arg4> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.RequestCommand.Unspecified": {
+      "id": "LDC_KAIROS_evt_027",
+      "full_type": "Contact.RequestCommand.Unspecified",
+      "type": "Contact",
+      "subtype": "RequestCommand",
+      "subsubtype": "Unspecified",
+      "definition": "A statement making a request, appeal, command, or order, where the context does not distinguish whether the communication is one-way or two-way, or whether it is in person or remote",
+      "template": "<arg1> communicated with <arg2> about <arg3> topic at <arg4> place (document does not specify in person or not, or one-way or not)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.ThreatenCoerce.Broadcast": {
+      "id": "LDC_KAIROS_evt_028",
+      "full_type": "Contact.ThreatenCoerce.Broadcast",
+      "type": "Contact",
+      "subtype": "ThreatenCoerce",
+      "subsubtype": "Broadcast",
+      "definition": "A statement offering threat or coercion via one-way communication",
+      "template": "<arg1> communicated to <arg2> about <arg4> topic using <arg3> at <arg5> place (one-way communication)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.ThreatenCoerce.Correspondence": {
+      "id": "LDC_KAIROS_evt_029",
+      "full_type": "Contact.ThreatenCoerce.Correspondence",
+      "type": "Contact",
+      "subtype": "ThreatenCoerce",
+      "subsubtype": "Correspondence",
+      "definition": "A statement offering threat or coercion via two-way communication, not in person",
+      "template": "<arg1> communicated remotely with <arg2> about <arg4> topic using <arg3> at <arg5> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "ABS",
+            "COM"
+          ]
+        },
+        "Topic": {
+          "position": "arg4",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.ThreatenCoerce.Meet": {
+      "id": "LDC_KAIROS_evt_030",
+      "full_type": "Contact.ThreatenCoerce.Meet",
+      "type": "Contact",
+      "subtype": "ThreatenCoerce",
+      "subsubtype": "Meet",
+      "definition": "A statement offering threat or coercion made in person",
+      "template": "<arg1> met face-to-face with <arg2> about <arg3> topic at <arg4> place",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Contact.ThreatenCoerce.Unspecified": {
+      "id": "LDC_KAIROS_evt_031",
+      "full_type": "Contact.ThreatenCoerce.Unspecified",
+      "type": "Contact",
+      "subtype": "ThreatenCoerce",
+      "subsubtype": "Unspecified",
+      "definition": "A statement offering threat or coercion, where the context does not distinguish whether the communication is one-way or two-way, or whether it is in person or remote",
+      "template": "<arg1> communicated with <arg2> about <arg3> topic at <arg4> place (document does not specify in person or not, or one-way or not)",
+      "args": {
+        "Communicator": {
+          "position": "arg1",
+          "label": "Communicator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Topic": {
+          "position": "arg3",
+          "label": "Topic",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "VAL",
+            "MHI",
+            "INF",
+            "ABS",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Control.ImpedeInterfereWith.Unspecified": {
+      "id": "LDC_KAIROS_evt_032",
+      "full_type": "Control.ImpedeInterfereWith.Unspecified",
+      "type": "Control",
+      "subtype": "ImpedeInterfereWith",
+      "subsubtype": "Unspecified",
+      "definition": "Explicit mention of an entity knowingly placing obstacles, not necessarily physical, that raise difficulties with respect to the occurrence of a taggable, non-Movement event or process",
+      "template": "<arg1> impeded or interfered with <arg2> event at <arg3> place",
+      "args": {
+        "Impeder": {
+          "position": "arg1",
+          "label": "Impeder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "ImpededEvent": {
+          "position": "arg2",
+          "label": "ImpededEvent",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg3",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Disaster.Crash.Unspecified": {
+      "id": "LDC_KAIROS_evt_033",
+      "full_type": "Disaster.Crash.Unspecified",
+      "type": "Disaster",
+      "subtype": "Crash",
+      "subsubtype": "Unspecified",
+      "definition": "Vehicular collision or the crashing of any type of vehicle",
+      "template": "<arg1> person in <arg2> vehicle crashed into <arg3> at <arg4> place",
+      "args": {
+        "DriverPassenger": {
+          "position": "arg1",
+          "label": "DriverPassenger",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg2",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "CrashObject": {
+          "position": "arg3",
+          "label": "CrashObject",
+          "constraints": [
+            "AML",
+            "COM",
+            "FAC",
+            "LOC",
+            "PER",
+            "VEH",
+            "WEA"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Disaster.DiseaseOutbreak.Unspecified": {
+      "id": "LDC_KAIROS_evt_034",
+      "full_type": "Disaster.DiseaseOutbreak.Unspecified",
+      "type": "Disaster",
+      "subtype": "DiseaseOutbreak",
+      "subsubtype": "Unspecified",
+      "definition": "Explicit mentions of an outbreak of a disease in an area, region, or country",
+      "template": "<arg1> disease broke out among <arg2> victims or population at <arg3> place",
+      "args": {
+        "Disease": {
+          "position": "arg1",
+          "label": "Disease",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "Victim": {
+          "position": "arg2",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "ORG",
+            "SID",
+            "AML",
+            "PLA"
+          ]
+        },
+        "Place": {
+          "position": "arg3",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Disaster.FireExplosion.Unspecified": {
+      "id": "LDC_KAIROS_evt_035",
+      "full_type": "Disaster.FireExplosion.Unspecified",
+      "type": "Disaster",
+      "subtype": "FireExplosion",
+      "subsubtype": "Unspecified",
+      "definition": "A damaging fire or explosion, either natural or caused but without the intent of attacking",
+      "template": "<arg1> caught fire or exploded from <arg2> instrument at <arg3> place",
+      "args": {
+        "FireExplosionObject": {
+          "position": "arg1",
+          "label": "FireExplosionObject",
+          "constraints": [
+            "BAL",
+            "VEH",
+            "WEA",
+            "FAC",
+            "LOC",
+            "COM",
+            "NAT"
+          ]
+        },
+        "Instrument": {
+          "position": "arg2",
+          "label": "Instrument",
+          "constraints": [
+            "COM",
+            "VEH",
+            "WEA",
+            "FAC"
+          ]
+        },
+        "Place": {
+          "position": "arg3",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "GenericCrime.GenericCrime.GenericCrime": {
+      "id": "LDC_KAIROS_evt_036",
+      "full_type": "GenericCrime.GenericCrime.GenericCrime",
+      "type": "GenericCrime",
+      "subtype": "GenericCrime",
+      "subsubtype": "GenericCrime",
+      "definition": "For use as the crime argument in a Justice event when the crime event is not taggable as any other annotation ontology event type",
+      "template": "<arg1> committed a crime against <arg2> at <arg3> place",
+      "args": {
+        "Perpetrator": {
+          "position": "arg1",
+          "label": "Perpetrator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Victim": {
+          "position": "arg2",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "Place": {
+          "position": "arg3",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.Acquit.Unspecified": {
+      "id": "LDC_KAIROS_evt_037",
+      "full_type": "Justice.Acquit.Unspecified",
+      "type": "Justice",
+      "subtype": "Acquit",
+      "subsubtype": "Unspecified",
+      "definition": "An acquit event occurs whenever a trial ends but fails to produce a conviction, including cases where the charges are dropped by the prosecutor",
+      "template": "<arg1> court or judge acquitted <arg2> of <arg3> crime in <arg4> place",
+      "args": {
+        "JudgeCourt": {
+          "position": "arg1",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.ArrestJailDetain.Unspecified": {
+      "id": "LDC_KAIROS_evt_038",
+      "full_type": "Justice.ArrestJailDetain.Unspecified",
+      "type": "Justice",
+      "subtype": "ArrestJailDetain",
+      "subsubtype": "Unspecified",
+      "definition": "The detention, taking hostage, kidnapping, arrest, or jailing of an individual by government or non-government actors",
+      "template": "<arg1> arrested or jailed <arg2> for <arg3> crime at <arg4> place",
+      "args": {
+        "Jailer": {
+          "position": "arg1",
+          "label": "Jailer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Detainee": {
+          "position": "arg2",
+          "label": "Detainee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.ChargeIndict.Unspecified": {
+      "id": "LDC_KAIROS_evt_039",
+      "full_type": "Justice.ChargeIndict.Unspecified",
+      "type": "Justice",
+      "subtype": "ChargeIndict",
+      "subsubtype": "Unspecified",
+      "definition": "A government actor charging, accusing, or indicting a person, organization, or GPE of a crime",
+      "template": "<arg1> charged or indicted <arg2> before <arg3> court or judge for <arg4> crime in <arg5> place",
+      "args": {
+        "Prosecutor": {
+          "position": "arg1",
+          "label": "Prosecutor",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "JudgeCourt": {
+          "position": "arg3",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg4",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.Convict.Unspecified": {
+      "id": "LDC_KAIROS_evt_040",
+      "full_type": "Justice.Convict.Unspecified",
+      "type": "Justice",
+      "subtype": "Convict",
+      "subsubtype": "Unspecified",
+      "definition": "A person, organization or GPE entity is convicted whenever that entity has been found guilty of a crime",
+      "template": "<arg1> court or judge convicted <arg2> of <arg3> crime in <arg4> place",
+      "args": {
+        "JudgeCourt": {
+          "position": "arg1",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.InvestigateCrime.Unspecified": {
+      "id": "LDC_KAIROS_evt_041",
+      "full_type": "Justice.InvestigateCrime.Unspecified",
+      "type": "Justice",
+      "subtype": "InvestigateCrime",
+      "subsubtype": "Unspecified",
+      "definition": "Legal, journalistic, and other investigations of crimes",
+      "template": "<arg1> investigated <arg2> for <arg3> crime in <arg4> place",
+      "args": {
+        "Investigator": {
+          "position": "arg1",
+          "label": "Investigator",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.ReleaseParole.Unspecified": {
+      "id": "LDC_KAIROS_evt_042",
+      "full_type": "Justice.ReleaseParole.Unspecified",
+      "type": "Justice",
+      "subtype": "ReleaseParole",
+      "subsubtype": "Unspecified",
+      "definition": "A release-parole event occurs whenever a state actor (GPE, organization subpart, or person representative) ends its custody of a person entity because the sentence has ended, because the charges are dropped, or because parole has been granted",
+      "template": "<arg1> court or judge released or paroled <arg2> from <arg3> crime in <arg4> place",
+      "args": {
+        "JudgeCourt": {
+          "position": "arg1",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.Sentence.Unspecified": {
+      "id": "LDC_KAIROS_evt_043",
+      "full_type": "Justice.Sentence.Unspecified",
+      "type": "Justice",
+      "subtype": "Sentence",
+      "subsubtype": "Unspecified",
+      "definition": "A sentence event takes place whenever the punishment, particularly incarceration, for the defendant of a trial event is issued by a state actor",
+      "template": "<arg1> court or judge sentenced <arg2> for <arg3> crime to <arg4> sentence in <arg5> place",
+      "args": {
+        "JudgeCourt": {
+          "position": "arg1",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg3",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Sentence": {
+          "position": "arg4",
+          "label": "Sentence",
+          "constraints": [
+            "SEN"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Justice.TrialHearing.Unspecified": {
+      "id": "LDC_KAIROS_evt_044",
+      "full_type": "Justice.TrialHearing.Unspecified",
+      "type": "Justice",
+      "subtype": "TrialHearing",
+      "subsubtype": "Unspecified",
+      "definition": "A trial event occurs whenever a court proceeding has been initiated for the purposes of determining the guilt or innocence of a person, organization or GPE accused of committing a crime. A hearing event occurs whenever a state actor (GPE, organization subpart, or person representative) officially gathers to discuss some criminal legal matter.",
+      "template": "<arg1> tried <arg2> before <arg3> court or judge for <arg4> crime in <arg5> place",
+      "args": {
+        "Prosecutor": {
+          "position": "arg1",
+          "label": "Prosecutor",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Defendant": {
+          "position": "arg2",
+          "label": "Defendant",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "JudgeCourt": {
+          "position": "arg3",
+          "label": "JudgeCourt",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Crime": {
+          "position": "arg4",
+          "label": "Crime",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Life.Consume.Unspecified": {
+      "id": "LDC_KAIROS_evt_045",
+      "full_type": "Life.Consume.Unspecified",
+      "type": "Life",
+      "subtype": "Consume",
+      "subsubtype": "Unspecified",
+      "definition": "An person or animal takes a substance into their body",
+      "template": "<arg1> consumed <arg2> at <arg3> place",
+      "args": {
+        "ConsumingEntity": {
+          "position": "arg1",
+          "label": "ConsumingEntity",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "ConsumedThing": {
+          "position": "arg2",
+          "label": "ConsumedThing",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg3",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Life.Die.Unspecified": {
+      "id": "LDC_KAIROS_evt_046",
+      "full_type": "Life.Die.Unspecified",
+      "type": "Life",
+      "subtype": "Die",
+      "subsubtype": "Unspecified",
+      "definition": "The death of a person or animal",
+      "template": "<arg1> died at <arg2> place from <arg4> medical issue, killed by <arg3> killer",
+      "args": {
+        "Victim": {
+          "position": "arg1",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "Place": {
+          "position": "arg2",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        },
+        "Killer": {
+          "position": "arg3",
+          "label": "Killer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "MedicalIssue": {
+          "position": "arg4",
+          "label": "MedicalIssue",
+          "constraints": [
+            "MHI"
+          ]
+        }
+      }
+    },
+    "Life.Illness.Unspecified": {
+      "id": "LDC_KAIROS_evt_047",
+      "full_type": "Life.Illness.Unspecified",
+      "type": "Life",
+      "subtype": "Illness",
+      "subsubtype": "Unspecified",
+      "definition": "A person or animal experiencing physical harm due to sickness or illness",
+      "template": "<arg1> has <arg3> sickness or illness at <arg4> place, deliberately infected by <arg2>",
+      "args": {
+        "Victim": {
+          "position": "arg1",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "DeliberateInjurer": {
+          "position": "arg2",
+          "label": "DeliberateInjurer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Disease": {
+          "position": "arg3",
+          "label": "Disease",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Life.Infect.Unspecified": {
+      "id": "LDC_KAIROS_evt_048",
+      "full_type": "Life.Infect.Unspecified",
+      "type": "Life",
+      "subtype": "Infect",
+      "subsubtype": "Unspecified",
+      "definition": "A person or animal is infected with a pathogen",
+      "template": "<arg1> was infected with <arg2> from <arg3> at <arg4> place",
+      "args": {
+        "Victim": {
+          "position": "arg1",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "InfectingAgent": {
+          "position": "arg2",
+          "label": "InfectingAgent",
+          "constraints": [
+            "PTH"
+          ]
+        },
+        "Source": {
+          "position": "arg3",
+          "label": "Source",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "MHI",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Life.Injure.Unspecified": {
+      "id": "LDC_KAIROS_evt_049",
+      "full_type": "Life.Injure.Unspecified",
+      "type": "Life",
+      "subtype": "Injure",
+      "subsubtype": "Unspecified",
+      "definition": "The physical injuring of a person or animal",
+      "template": "<arg1> was injured by <arg2> using <arg3> in <arg4> body part with <arg5> medical issue at <arg6> place",
+      "args": {
+        "Victim": {
+          "position": "arg1",
+          "label": "Victim",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "Injurer": {
+          "position": "arg2",
+          "label": "Injurer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AML"
+          ]
+        },
+        "Instrument": {
+          "position": "arg3",
+          "label": "Instrument",
+          "constraints": [
+            "BAL",
+            "COM",
+            "VEH",
+            "WEA",
+            "FAC",
+            "MON"
+          ]
+        },
+        "BodyPart": {
+          "position": "arg4",
+          "label": "BodyPart",
+          "constraints": [
+            "BOD"
+          ]
+        },
+        "MedicalCondition": {
+          "position": "arg5",
+          "label": "MedicalCondition",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "Place": {
+          "position": "arg6",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Medical.Diagnosis.Unspecified": {
+      "id": "LDC_KAIROS_evt_050",
+      "full_type": "Medical.Diagnosis.Unspecified",
+      "type": "Medical",
+      "subtype": "Diagnosis",
+      "subsubtype": "Unspecified",
+      "definition": "A determination of the disease or medical condition that explains a person's or animal's symptoms and signs",
+      "template": "<arg1> treater diagnosed <arg2> patient with <arg3> symptom for <arg4> medical issue at <arg5> place",
+      "args": {
+        "Treater": {
+          "position": "arg1",
+          "label": "Treater",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Patient": {
+          "position": "arg2",
+          "label": "Patient",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "SymptomSign": {
+          "position": "arg3",
+          "label": "SymptomSign",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "MedicalCondition": {
+          "position": "arg4",
+          "label": "MedicalCondition",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Medical.Intervention.Unspecified": {
+      "id": "LDC_KAIROS_evt_051",
+      "full_type": "Medical.Intervention.Unspecified",
+      "type": "Medical",
+      "subtype": "Intervention",
+      "subsubtype": "Unspecified",
+      "definition": "Any kind of medical treatment or intervention for a person or an animal, often following a diagnosis of a medical condition",
+      "template": "<arg1> treater treated <arg2> patient for <arg3> medical issue with <arg4> means at <arg5> place",
+      "args": {
+        "Treater": {
+          "position": "arg1",
+          "label": "Treater",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Patient": {
+          "position": "arg2",
+          "label": "Patient",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "MedicalIssue": {
+          "position": "arg3",
+          "label": "MedicalIssue",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "Instrument": {
+          "position": "arg4",
+          "label": "Instrument",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Medical.Vaccinate.Unspecified": {
+      "id": "LDC_KAIROS_evt_052",
+      "full_type": "Medical.Vaccinate.Unspecified",
+      "type": "Medical",
+      "subtype": "Vaccinate",
+      "subsubtype": "Unspecified",
+      "definition": "A person or an animal is inoculated against a disease",
+      "template": "<arg1> treater vaccinated <arg2> patient via <arg4> vaccination method for <arg3> medical issue at <arg5> place",
+      "args": {
+        "Treater": {
+          "position": "arg1",
+          "label": "Treater",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Patient": {
+          "position": "arg2",
+          "label": "Patient",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "VaccineTarget": {
+          "position": "arg3",
+          "label": "VaccineTarget",
+          "constraints": [
+            "MHI"
+          ]
+        },
+        "VaccineMethod": {
+          "position": "arg4",
+          "label": "VaccineMethod",
+          "constraints": [
+            "COM"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Movement.Transportation.Evacuation": {
+      "id": "LDC_KAIROS_evt_053",
+      "full_type": "Movement.Transportation.Evacuation",
+      "type": "Movement",
+      "subtype": "Transportation",
+      "subsubtype": "Evacuation",
+      "definition": "The movement of a person or animal (by an agent or via their own effort) from one place to another for evacuation purposes",
+      "template": "<arg1> transported <arg2> in <arg3> from <arg4> place to <arg5> place",
+      "args": {
+        "Transporter": {
+          "position": "arg1",
+          "label": "Transporter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "PassengerArtifact": {
+          "position": "arg2",
+          "label": "PassengerArtifact",
+          "constraints": [
+            "PER",
+            "AML"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg3",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "Origin": {
+          "position": "arg4",
+          "label": "Origin",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        },
+        "Destination": {
+          "position": "arg5",
+          "label": "Destination",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Movement.Transportation.GrantAllowPassage": {
+      "id": "LDC_KAIROS_evt_054",
+      "full_type": "Movement.Transportation.GrantAllowPassage",
+      "type": "Movement",
+      "subtype": "Transportation",
+      "subsubtype": "GrantAllowPassage",
+      "definition": "Explicit mention of granting or allowing entry or exit from a location",
+      "template": "<arg4> grants <arg1> entry to <arg6> place from <arg5> place to transport <arg2> using <arg3> vehicle",
+      "args": {
+        "Transporter": {
+          "position": "arg1",
+          "label": "Transporter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "PassengerArtifact": {
+          "position": "arg2",
+          "label": "PassengerArtifact",
+          "constraints": [
+            "PER",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "PTH",
+            "PLA",
+            "BOD",
+            "NAT"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg3",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "Granter": {
+          "position": "arg4",
+          "label": "Granter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Origin": {
+          "position": "arg5",
+          "label": "Origin",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        },
+        "Destination": {
+          "position": "arg6",
+          "label": "Destination",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Movement.Transportation.IllegalTransportation": {
+      "id": "LDC_KAIROS_evt_055",
+      "full_type": "Movement.Transportation.IllegalTransportation",
+      "type": "Movement",
+      "subtype": "Transportation",
+      "subsubtype": "IllegalTransportation",
+      "definition": "Explicit mention of illegal physical transporting of people or things between places, such as smuggling, trafficking, illegal border crossings",
+      "template": "<arg1> illegally transported <arg2> in <arg3> from <arg4> place to <arg5> place",
+      "args": {
+        "Transporter": {
+          "position": "arg1",
+          "label": "Transporter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "PassengerArtifact": {
+          "position": "arg2",
+          "label": "PassengerArtifact",
+          "constraints": [
+            "PER",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "PTH",
+            "PLA",
+            "BOD",
+            "NAT"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg3",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "Origin": {
+          "position": "arg4",
+          "label": "Origin",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        },
+        "Destination": {
+          "position": "arg5",
+          "label": "Destination",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Movement.Transportation.PreventPassage": {
+      "id": "LDC_KAIROS_evt_056",
+      "full_type": "Movement.Transportation.PreventPassage",
+      "type": "Movement",
+      "subtype": "Transportation",
+      "subsubtype": "PreventPassage",
+      "definition": "Explicit mention of preventing entry or exit from a location",
+      "template": "<arg4> prevents <arg1> from entering <arg6> place from <arg5> place to transport <arg2> using <arg3> vehicle",
+      "args": {
+        "Transporter": {
+          "position": "arg1",
+          "label": "Transporter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "SID",
+            "GPE"
+          ]
+        },
+        "PassengerArtifact": {
+          "position": "arg2",
+          "label": "PassengerArtifact",
+          "constraints": [
+            "PER",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "PTH",
+            "PLA",
+            "BOD",
+            "NAT"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg3",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "Preventer": {
+          "position": "arg4",
+          "label": "Preventer",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Origin": {
+          "position": "arg5",
+          "label": "Origin",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        },
+        "Destination": {
+          "position": "arg6",
+          "label": "Destination",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Movement.Transportation.Unspecified": {
+      "id": "LDC_KAIROS_evt_057",
+      "full_type": "Movement.Transportation.Unspecified",
+      "type": "Movement",
+      "subtype": "Transportation",
+      "subsubtype": "Unspecified",
+      "definition": "Physical movement or transportation of a person or artifact between places, includes putting and placing objects in locations",
+      "template": "<arg1> transported <arg2> in <arg3> from <arg4> place to <arg5> place",
+      "args": {
+        "Transporter": {
+          "position": "arg1",
+          "label": "Transporter",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "PassengerArtifact": {
+          "position": "arg2",
+          "label": "PassengerArtifact",
+          "constraints": [
+            "PER",
+            "BAL",
+            "COM",
+            "FAC",
+            "LOC",
+            "MON",
+            "VEH",
+            "WEA",
+            "AML",
+            "PTH",
+            "PLA",
+            "BOD",
+            "NAT"
+          ]
+        },
+        "Vehicle": {
+          "position": "arg3",
+          "label": "Vehicle",
+          "constraints": [
+            "VEH"
+          ]
+        },
+        "Origin": {
+          "position": "arg4",
+          "label": "Origin",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        },
+        "Destination": {
+          "position": "arg5",
+          "label": "Destination",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC",
+            "COM",
+            "VEH"
+          ]
+        }
+      }
+    },
+    "Personnel.ChangePosition.ChangeJobLocation": {
+      "id": "LDC_KAIROS_evt_058",
+      "full_type": "Personnel.ChangePosition.ChangeJobLocation",
+      "type": "Personnel",
+      "subtype": "ChangePosition",
+      "subsubtype": "ChangeJobLocation",
+      "definition": "A person continuing in the same role in a different location in the same organization",
+      "template": "<arg1> changed job locations at <arg2> organization from <arg3> old location of organization to <arg4> new location of organization",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "PreviousOrgLocation": {
+          "position": "arg3",
+          "label": "PreviousOrgLocation",
+          "constraints": [
+            "LOC",
+            "GPE"
+          ]
+        },
+        "NewOrgLocation": {
+          "position": "arg4",
+          "label": "NewOrgLocation",
+          "constraints": [
+            "LOC",
+            "GPE"
+          ]
+        }
+      }
+    },
+    "Personnel.ChangePosition.Demotion": {
+      "id": "LDC_KAIROS_evt_059",
+      "full_type": "Personnel.ChangePosition.Demotion",
+      "type": "Personnel",
+      "subtype": "ChangePosition",
+      "subsubtype": "Demotion",
+      "definition": "A person being demoted from a position to a lower position in the same organization",
+      "template": "<arg1> was demoted at <arg2> organization from <arg3> old position to <arg4> new position  in <arg5> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "PreviousPosition": {
+          "position": "arg3",
+          "label": "PreviousPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "NewPosition": {
+          "position": "arg4",
+          "label": "NewPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Personnel.ChangePosition.Lateral": {
+      "id": "LDC_KAIROS_evt_060",
+      "full_type": "Personnel.ChangePosition.Lateral",
+      "type": "Personnel",
+      "subtype": "ChangePosition",
+      "subsubtype": "Lateral",
+      "definition": "A person changing from one position to another with equal status in the same organization",
+      "template": "<arg1> changed working positions laterally at <arg2> organization from <arg3> old position to <arg4> new position  in <arg5> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "PreviousPosition": {
+          "position": "arg3",
+          "label": "PreviousPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "NewPosition": {
+          "position": "arg4",
+          "label": "NewPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Personnel.ChangePosition.Promotion": {
+      "id": "LDC_KAIROS_evt_061",
+      "full_type": "Personnel.ChangePosition.Promotion",
+      "type": "Personnel",
+      "subtype": "ChangePosition",
+      "subsubtype": "Promotion",
+      "definition": "A person being promoted from a position to a higher position in the same organization",
+      "template": "<arg1> was promoted at <arg2> organization from <arg3> old position to <arg4> new position  in <arg5> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "PreviousPosition": {
+          "position": "arg3",
+          "label": "PreviousPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "NewPosition": {
+          "position": "arg4",
+          "label": "NewPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Personnel.ChangePosition.Unspecified": {
+      "id": "LDC_KAIROS_evt_062",
+      "full_type": "Personnel.ChangePosition.Unspecified",
+      "type": "Personnel",
+      "subtype": "ChangePosition",
+      "subsubtype": "Unspecified",
+      "definition": "A person changing from one position to another in the same organization, with no indication of relative levels of the positions",
+      "template": "<arg1> changed working positions at <arg2> organization from <arg3> old position to <arg4> new position  in <arg5> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "PreviousPosition": {
+          "position": "arg3",
+          "label": "PreviousPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "NewPosition": {
+          "position": "arg4",
+          "label": "NewPosition",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Personnel.EndPosition.Unspecified": {
+      "id": "LDC_KAIROS_evt_063",
+      "full_type": "Personnel.EndPosition.Unspecified",
+      "type": "Personnel",
+      "subtype": "EndPosition",
+      "subsubtype": "Unspecified",
+      "definition": "A person stopping working in a position, with no indication that they are changing positions within the same organization",
+      "template": "<arg1> stopped working in <arg3> position at <arg2> organization in <arg4> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "Position": {
+          "position": "arg3",
+          "label": "Position",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Personnel.StartPosition.Unspecified": {
+      "id": "LDC_KAIROS_evt_064",
+      "full_type": "Personnel.StartPosition.Unspecified",
+      "type": "Personnel",
+      "subtype": "StartPosition",
+      "subsubtype": "Unspecified",
+      "definition": "A person starting working in a position, with no indication that they are changing positions within the same organization",
+      "template": "<arg1> started working in <arg3> position at <arg2> organization in <arg4> place",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "Position": {
+          "position": "arg3",
+          "label": "Position",
+          "constraints": [
+            "TTL"
+          ]
+        },
+        "Place": {
+          "position": "arg4",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Transaction.AidBetweenGovernments.Unspecified": {
+      "id": "LDC_KAIROS_evt_065",
+      "full_type": "Transaction.AidBetweenGovernments.Unspecified",
+      "type": "Transaction",
+      "subtype": "AidBetweenGovernments",
+      "subsubtype": "Unspecified",
+      "definition": "A voluntary transfer of resources from one GPE to another from the perspective of governments, often with strings attached",
+      "template": "<arg1> government gave <arg4> aid to <arg2> government for the benefit of <arg3> at <arg5> place",
+      "args": {
+        "Giver": {
+          "position": "arg1",
+          "label": "Giver",
+          "constraints": [
+            "GPE"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "GPE"
+          ]
+        },
+        "Beneficiary": {
+          "position": "arg3",
+          "label": "Beneficiary",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "ArtifactMoney": {
+          "position": "arg4",
+          "label": "ArtifactMoney",
+          "constraints": [
+            "MON",
+            "COM",
+            "BAL",
+            "FAC",
+            "VEH",
+            "WEA",
+            "AML",
+            "PLA",
+            "NAT",
+            "ABS",
+            "BOD"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Transaction.Donation.Unspecified": {
+      "id": "LDC_KAIROS_evt_066",
+      "full_type": "Transaction.Donation.Unspecified",
+      "type": "Transaction",
+      "subtype": "Donation",
+      "subsubtype": "Unspecified",
+      "definition": "The voluntary provision, donation, or extension of material aid in the form of assets or commodities (nb: use AidBetweenGovernments instead for GPE to GPE donations)",
+      "template": "<arg1> gave <arg4> to <arg2> for the benefit of <arg3> at <arg5> place",
+      "args": {
+        "Giver": {
+          "position": "arg1",
+          "label": "Giver",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Beneficiary": {
+          "position": "arg3",
+          "label": "Beneficiary",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "ArtifactMoney": {
+          "position": "arg4",
+          "label": "ArtifactMoney",
+          "constraints": [
+            "MON",
+            "COM",
+            "BAL",
+            "FAC",
+            "VEH",
+            "WEA",
+            "AML",
+            "PLA",
+            "NAT",
+            "ABS",
+            "BOD"
+          ]
+        },
+        "Place": {
+          "position": "arg5",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Transaction.ExchangeBuySell.Unspecified": {
+      "id": "LDC_KAIROS_evt_067",
+      "full_type": "Transaction.ExchangeBuySell.Unspecified",
+      "type": "Transaction",
+      "subtype": "ExchangeBuySell",
+      "subsubtype": "Unspecified",
+      "definition": "A transaction transferring or obtaining money, ownership, possession, or control of something, applicable to any type, nature, or method of acquisition including barter",
+      "template": "<arg1> bought, sold, or traded <arg3> to <arg2> in exchange for <arg4> for the benefit of <arg5> at <arg6> place",
+      "args": {
+        "Giver": {
+          "position": "arg1",
+          "label": "Giver",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Recipient": {
+          "position": "arg2",
+          "label": "Recipient",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "AcquiredEntity": {
+          "position": "arg3",
+          "label": "AcquiredEntity",
+          "constraints": [
+            "BAL",
+            "COM",
+            "GPE",
+            "FAC",
+            "LOC",
+            "MON",
+            "ORG",
+            "VEH",
+            "WEA",
+            "ABS",
+            "AML",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "PaymentBarter": {
+          "position": "arg4",
+          "label": "PaymentBarter",
+          "constraints": [
+            "BAL",
+            "COM",
+            "GPE",
+            "FAC",
+            "LOC",
+            "MON",
+            "ORG",
+            "VEH",
+            "WEA",
+            "ABS",
+            "AML",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Beneficiary": {
+          "position": "arg5",
+          "label": "Beneficiary",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Place": {
+          "position": "arg6",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    }
+  },
+  "entities": {
+    "ABS": {
+      "id": "LDC_KAIROS_ent_001",
+      "type": "ABS",
+      "definition": "Abstract, non-tangible artifacts such as software (e.g., programs, tool kits, apps, e-mail), measureable intellectual property, contracts, etc. (nb: does not include laws, which are LAW type)"
+    },
+    "AML": {
+      "id": "LDC_KAIROS_ent_002",
+      "type": "AML",
+      "definition": "Animal, a non-human living organism which feeds on organic matter, typically having specialized sense organs and a nervous system and able to respond rapidly to stimuli"
+    },
+    "BAL": {
+      "id": "LDC_KAIROS_ent_003",
+      "type": "BAL",
+      "definition": "A ballot for an election, either the paper ballot used for voting, including both physical paper ballots and also the slate of candidates and ballot questions"
+    },
+    "BOD": {
+      "id": "LDC_KAIROS_ent_004",
+      "type": "BOD",
+      "definition": "An identifiable, living part of a human's or animal's body, such as a eye, ear, neck, leg, etc."
+    },
+    "COM": {
+      "id": "LDC_KAIROS_ent_005",
+      "type": "COM",
+      "definition": "A tangible product or article of trade for which someone pays or barters, or more generally, an artifact or a thing"
+    },
+    "FAC": {
+      "id": "LDC_KAIROS_ent_006",
+      "type": "FAC",
+      "definition": "A functional, primarily man-made structure. Facilities are artifacts falling under the domains of architecture and civil engineering, including more temporary human constructs, such as police lines and checkpoints."
+    },
+    "GPE": {
+      "id": "LDC_KAIROS_ent_007",
+      "type": "GPE",
+      "definition": "Geopolitical entities such as countries, provinces, states, cities, towns, etc. GPEs are composite entities, consisting of a physical location, a government, and a population. All three of these elements must be present for an entity to be tagged as a GPE. A GPE entity may be a single geopolitical entity or a group."
+    },
+    "INF": {
+      "id": "LDC_KAIROS_ent_008",
+      "type": "INF",
+      "definition": "An information object such as a field of study or topic of communication, including thoughts, opinions, etc."
+    },
+    "LAW": {
+      "id": "LDC_KAIROS_ent_009",
+      "type": "LAW",
+      "definition": "A law, an act that is voted on by either a legislative body or an electorate, such as a law, referendum, act, regulation, statute, ordinance, etc."
+    },
+    "LOC": {
+      "id": "LDC_KAIROS_ent_010",
+      "type": "LOC",
+      "definition": "Geographical entities such as geographical areas and landmasses, bodies of water"
+    },
+    "MHI": {
+      "id": "LDC_KAIROS_ent_011",
+      "type": "MHI",
+      "definition": "Any medical condition or health issue, to include everything from disease to broken bones to fever to general ill health, medical errors, even natural causes"
+    },
+    "MON": {
+      "id": "LDC_KAIROS_ent_012",
+      "type": "MON",
+      "definition": "A monetary payment. The extent of a Money mention includes modifying quantifiers, the amount, and the currency unit, all of which can be optional."
+    },
+    "NAT": {
+      "id": "LDC_KAIROS_ent_013",
+      "type": "NAT",
+      "definition": "Valuable materials or substances, such as minerals, forests, water, and fertile land, that are not man-made, occur naturally within the environment and can be used for economic gain"
+    },
+    "ORG": {
+      "id": "LDC_KAIROS_ent_014",
+      "type": "ORG",
+      "definition": "Corporations, agencies, and other groups of people defined by an established organizational structure. An ORG entity may be a single organization or a group. A key feature of an ORG is that it can change members without changing identity."
+    },
+    "PER": {
+      "id": "LDC_KAIROS_ent_015",
+      "type": "PER",
+      "definition": "Person entities are limited to humans. A PER entity may be a single person or a group."
+    },
+    "PLA": {
+      "id": "LDC_KAIROS_ent_016",
+      "type": "PLA",
+      "definition": "Plants/flora as well as edible fungi such as mushrooms; multicellular living organisms, typically growing in the earth and  lacking the power of locomotion, ex. grass and crops such as wheat, beans, fruit, etc."
+    },
+    "PTH": {
+      "id": "LDC_KAIROS_ent_017",
+      "type": "PTH",
+      "definition": "An infectious microorganism or agent, such as a virus, bacterium, protozoan, prion, viroid, or fungus"
+    },
+    "RES": {
+      "id": "LDC_KAIROS_ent_018",
+      "type": "RES",
+      "definition": "The results of a voting event.  This will cover general results as well as counted results."
+    },
+    "SEN": {
+      "id": "LDC_KAIROS_ent_019",
+      "type": "SEN",
+      "definition": "The judicial or court sentence in a Justice event, the punishment a judge gives to a defendant found guilty of a crime"
+    },
+    "SID": {
+      "id": "LDC_KAIROS_ent_020",
+      "type": "SID",
+      "definition": "The different sides of a conflict, such as  philosophical, cultural, ideological, religious, political, guiding philosophical movement or group orientation.  This will encompass sides of the battle/conflict, sports fans when salient, and other such affiliations, in addition to religions, political parties, and other philosophies."
+    },
+    "TTL": {
+      "id": "LDC_KAIROS_ent_021",
+      "type": "TTL",
+      "definition": "A person’s title or job role"
+    },
+    "VAL": {
+      "id": "LDC_KAIROS_ent_022",
+      "type": "VAL",
+      "definition": "A numerical value or non-numerical value such as an informational property such as color or make or URL"
+    },
+    "VEH": {
+      "id": "LDC_KAIROS_ent_023",
+      "type": "VEH",
+      "definition": "A physical device primarily designed to move an object from one location to another, by (for example) carrying, flying, pulling, or pushing the transported object. Vehicle entities may or may not have their own power source."
+    },
+    "WEA": {
+      "id": "LDC_KAIROS_ent_024",
+      "type": "WEA",
+      "definition": "A physical device that is primarily used as an instrument for physically harming or destroying entities"
+    }
+  },
+  "relations": {
+    "Evaluate.Belief.CommittedBelief": {
+      "id": "LDC_KAIROS_rel_001",
+      "full_type": "Evaluate.Belief.CommittedBelief",
+      "type": "Evaluate",
+      "subtype": "Belief",
+      "subsubtype": "CommittedBelief",
+      "definition": "Explicit mention of an entity believing with certainty that an event or information object is true",
+      "template": "<arg1> believes with certainty that <arg2> is true",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "BeliefTarget": {
+          "position": "arg2",
+          "label": "BeliefTarget",
+          "constraints": [
+            "EVENT",
+            "INF"
+          ]
+        }
+      }
+    },
+    "Evaluate.Belief.NonCommittedBelief": {
+      "id": "LDC_KAIROS_rel_002",
+      "full_type": "Evaluate.Belief.NonCommittedBelief",
+      "type": "Evaluate",
+      "subtype": "Belief",
+      "subsubtype": "NonCommittedBelief",
+      "definition": "Explicit mention of an entity believing an event or information object is possibly but not necessarily true; they do not have a strong belief in it",
+      "template": "<arg1> believes <arg2> is possibly but not necessarily true",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "BeliefTarget": {
+          "position": "arg2",
+          "label": "BeliefTarget",
+          "constraints": [
+            "EVENT",
+            "INF"
+          ]
+        }
+      }
+    },
+    "Evaluate.Intent.Intent": {
+      "id": "LDC_KAIROS_rel_003",
+      "full_type": "Evaluate.Intent.Intent",
+      "type": "Evaluate",
+      "subtype": "Intent",
+      "subsubtype": "Intent",
+      "definition": "Explicit mention of an entity intending a future event or planning or attempting to achieve it",
+      "template": "<arg1> intends, plans for, or attempts <arg2> event",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AUTHOR_CHECK"
+          ]
+        },
+        "IntendedEvent": {
+          "position": "arg2",
+          "label": "IntendedEvent",
+          "constraints": [
+            "EVENT"
+          ]
+        }
+      }
+    },
+    "Evaluate.Sentiment.Negative": {
+      "id": "LDC_KAIROS_rel_004",
+      "full_type": "Evaluate.Sentiment.Negative",
+      "type": "Evaluate",
+      "subtype": "Sentiment",
+      "subsubtype": "Negative",
+      "definition": "Negative sentiment held by a person, organization, or GPE toward any knowledge element",
+      "template": "<arg1> holds negative sentiment towards <arg2>",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AUTHOR_CHECK"
+          ]
+        },
+        "SentimentTarget": {
+          "position": "arg2",
+          "label": "SentimentTarget",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "BAL",
+            "RES",
+            "LAW",
+            "MON",
+            "MHI",
+            "AML",
+            "ABS",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH",
+            "COM",
+            "VEH",
+            "WEA",
+            "SEN",
+            "INF"
+          ]
+        }
+      }
+    },
+    "Evaluate.Sentiment.Positive": {
+      "id": "LDC_KAIROS_rel_005",
+      "full_type": "Evaluate.Sentiment.Positive",
+      "type": "Evaluate",
+      "subtype": "Sentiment",
+      "subsubtype": "Positive",
+      "definition": "Positive sentiment held by a person, organization, or GPE toward any knowledge element",
+      "template": "<arg1> holds positive sentiment towards <arg2>",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AUTHOR_CHECK"
+          ]
+        },
+        "SentimentTarget": {
+          "position": "arg2",
+          "label": "SentimentTarget",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "BAL",
+            "RES",
+            "LAW",
+            "MON",
+            "MHI",
+            "AML",
+            "ABS",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH",
+            "COM",
+            "VEH",
+            "WEA",
+            "SEN",
+            "INF"
+          ]
+        }
+      }
+    },
+    "Evaluate.Status.HoaxFraud": {
+      "id": "LDC_KAIROS_rel_006",
+      "full_type": "Evaluate.Status.HoaxFraud",
+      "type": "Evaluate",
+      "subtype": "Status",
+      "subsubtype": "HoaxFraud",
+      "definition": "Explicit mentions asserting that an event or a thing is a hoax or fraud",
+      "template": "<arg1> holds that <arg2> is a hoax or a fraud",
+      "args": {
+        "Holder": {
+          "position": "arg1",
+          "label": "Holder",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "AUTHOR_CHECK"
+          ]
+        },
+        "HoaxFraud": {
+          "position": "arg2",
+          "label": "HoaxFraud",
+          "constraints": [
+            "EVENT",
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "COM",
+            "BAL",
+            "RES",
+            "LAW",
+            "MON",
+            "TTL",
+            "VAL",
+            "VEH",
+            "WEA",
+            "MHI",
+            "AML",
+            "ABS",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.ControlTerritory": {
+      "id": "LDC_KAIROS_rel_007",
+      "full_type": "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.ControlTerritory",
+      "type": "GeneralAffiliation",
+      "subtype": "ArtifactPoliticalOrganizationReligiousAffiliation",
+      "subsubtype": "ControlTerritory",
+      "definition": "A side, person, organization, location, or GPE controlling territory.",
+      "template": "<arg1> is controlled by <arg2>",
+      "args": {
+        "Territory": {
+          "position": "arg1",
+          "label": "Territory",
+          "constraints": [
+            "GPE",
+            "LOC",
+            "FAC"
+          ]
+        },
+        "Controller": {
+          "position": "arg2",
+          "label": "Controller",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.NationalityCitizen": {
+      "id": "LDC_KAIROS_rel_008",
+      "full_type": "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.NationalityCitizen",
+      "type": "GeneralAffiliation",
+      "subtype": "ArtifactPoliticalOrganizationReligiousAffiliation",
+      "subsubtype": "NationalityCitizen",
+      "definition": "The affiliation between an artifact (including vehicles, weapons, commodities, etc.) and a GPE.  Artifact-Political-Organization-Religious-Affiliation (APORA).",
+      "template": "<arg1> is affiliated with <arg2> GPE",
+      "args": {
+        "Artifact": {
+          "position": "arg1",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "MON",
+            "VEH",
+            "WEA",
+            "NAT",
+            "PTH",
+            "ABS"
+          ]
+        },
+        "Nationality": {
+          "position": "arg2",
+          "label": "Nationality",
+          "constraints": [
+            "GPE"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.OwnershipPossession": {
+      "id": "LDC_KAIROS_rel_009",
+      "full_type": "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.OwnershipPossession",
+      "type": "GeneralAffiliation",
+      "subtype": "ArtifactPoliticalOrganizationReligiousAffiliation",
+      "subsubtype": "OwnershipPossession",
+      "definition": "The ownership or possession of an artifact (including vehicles, weapons, commodities, etc.) by a person, group, or side.  Artifact-Political-Organization-Religious-Affiliation (APORA).",
+      "template": "<arg1> is owned by <arg2>",
+      "args": {
+        "Artifact": {
+          "position": "arg1",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "MON",
+            "VEH",
+            "WEA",
+            "NAT",
+            "PTH",
+            "ABS"
+          ]
+        },
+        "Owner": {
+          "position": "arg2",
+          "label": "Owner",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.Unspecified": {
+      "id": "LDC_KAIROS_rel_010",
+      "full_type": "GeneralAffiliation.ArtifactPoliticalOrganizationReligiousAffiliation.Unspecified",
+      "type": "GeneralAffiliation",
+      "subtype": "ArtifactPoliticalOrganizationReligiousAffiliation",
+      "subsubtype": "Unspecified",
+      "definition": "The affiliation between an artifact (including vehicles, weapons, commodities, etc.) and another entity.  Artifact-Political-Organization-Religious-Affiliation (APORA).",
+      "template": "<arg1> is affiliated with <arg2>",
+      "args": {
+        "Artifact": {
+          "position": "arg1",
+          "label": "Artifact",
+          "constraints": [
+            "BAL",
+            "COM",
+            "FAC",
+            "MON",
+            "VEH",
+            "WEA",
+            "NAT",
+            "PTH",
+            "ABS"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "INF"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.MemberOriginReligionEthnicity.Ethnicity": {
+      "id": "LDC_KAIROS_rel_011",
+      "full_type": "GeneralAffiliation.MemberOriginReligionEthnicity.Ethnicity",
+      "type": "GeneralAffiliation",
+      "subtype": "MemberOriginReligionEthnicity",
+      "subsubtype": "Ethnicity",
+      "definition": "The affiliation between a person entity and an ethnicity.  Member-Origin-Religion-Ethnicity (MORE)",
+      "template": "<arg1> has <arg2> ethnicity",
+      "args": {
+        "Person": {
+          "position": "arg1",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Ethnicity": {
+          "position": "arg2",
+          "label": "Ethnicity",
+          "constraints": [
+            "PER",
+            "GPE",
+            "LOC",
+            "SID"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.MemberOriginReligionEthnicity.NationalityCitizen": {
+      "id": "LDC_KAIROS_rel_012",
+      "full_type": "GeneralAffiliation.MemberOriginReligionEthnicity.NationalityCitizen",
+      "type": "GeneralAffiliation",
+      "subtype": "MemberOriginReligionEthnicity",
+      "subsubtype": "NationalityCitizen",
+      "definition": "The affiliation between a person entity and a GPE.  Member-Origin-Religion-Ethnicity (MORE)",
+      "template": "<arg1> is affiliated with <arg2> GPE",
+      "args": {
+        "Citizen": {
+          "position": "arg1",
+          "label": "Citizen",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Nationality": {
+          "position": "arg2",
+          "label": "Nationality",
+          "constraints": [
+            "GPE"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.MemberOriginReligionEthnicity.Unspecified": {
+      "id": "LDC_KAIROS_rel_013",
+      "full_type": "GeneralAffiliation.MemberOriginReligionEthnicity.Unspecified",
+      "type": "GeneralAffiliation",
+      "subtype": "MemberOriginReligionEthnicity",
+      "subsubtype": "Unspecified",
+      "definition": "The affiliation between a person entity and another entity.  Member-Origin-Religion-Ethnicity (MORE)",
+      "template": "<arg1> is affiliated with <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg1",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "GPE",
+            "LOC",
+            "SID",
+            "INF"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.OrganizationPoliticalReligiousAffiliation.NationalityCitizen": {
+      "id": "LDC_KAIROS_rel_014",
+      "full_type": "GeneralAffiliation.OrganizationPoliticalReligiousAffiliation.NationalityCitizen",
+      "type": "GeneralAffiliation",
+      "subtype": "OrganizationPoliticalReligiousAffiliation",
+      "subsubtype": "NationalityCitizen",
+      "definition": "The affiliation between an organization entity and a GPE.  Organization-Political-Religious-Affiliation (OPRA)",
+      "template": "<arg1> is affiliated with <arg2> GPE",
+      "args": {
+        "Organization": {
+          "position": "arg1",
+          "label": "Organization",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Nationality": {
+          "position": "arg2",
+          "label": "Nationality",
+          "constraints": [
+            "GPE"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.OrganizationPoliticalReligiousAffiliation.Unspecified": {
+      "id": "LDC_KAIROS_rel_015",
+      "full_type": "GeneralAffiliation.OrganizationPoliticalReligiousAffiliation.Unspecified",
+      "type": "GeneralAffiliation",
+      "subtype": "OrganizationPoliticalReligiousAffiliation",
+      "subsubtype": "Unspecified",
+      "definition": "The affiliation between an organization entity and another entity.  Organization-Political-Religious-Affiliation (OPRA)",
+      "template": "<arg1> is affiliated with <arg2>",
+      "args": {
+        "Organization": {
+          "position": "arg1",
+          "label": "Organization",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "INF"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.OrganizationWebsite.OrganizationWebsite": {
+      "id": "LDC_KAIROS_rel_016",
+      "full_type": "GeneralAffiliation.OrganizationWebsite.OrganizationWebsite",
+      "type": "GeneralAffiliation",
+      "subtype": "OrganizationWebsite",
+      "subsubtype": "OrganizationWebsite",
+      "definition": "An official top level URL for an organization entity’s website",
+      "template": "<arg1> has <arg2> website",
+      "args": {
+        "Organization": {
+          "position": "arg1",
+          "label": "Organization",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Website": {
+          "position": "arg2",
+          "label": "Website",
+          "constraints": [
+            "VAL"
+          ]
+        }
+      }
+    },
+    "GeneralAffiliation.Sponsorship.Unspecified": {
+      "id": "LDC_KAIROS_rel_017",
+      "full_type": "GeneralAffiliation.Sponsorship.Unspecified",
+      "type": "GeneralAffiliation",
+      "subtype": "Sponsorship",
+      "subsubtype": "Unspecified",
+      "definition": "The sponsorship of an event by a one-step removed sponsor (or several steps removed, the man-behind-the-curtain, or more likely the country behind the curtain)",
+      "template": "<arg1> event is sponsored by <arg2>",
+      "args": {
+        "Event": {
+          "position": "arg1",
+          "label": "Event",
+          "constraints": [
+            "EVENT"
+          ]
+        },
+        "Sponsor": {
+          "position": "arg2",
+          "label": "Sponsor",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        }
+      }
+    },
+    "Information.Color.Color": {
+      "id": "LDC_KAIROS_rel_018",
+      "full_type": "Information.Color.Color",
+      "type": "Information",
+      "subtype": "Color",
+      "subsubtype": "Color",
+      "definition": "The relation between an entity or thing and a color (string)",
+      "template": "<arg1> has color <arg2>",
+      "args": {
+        "EntityOrFiller": {
+          "position": "arg1",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Color": {
+          "position": "arg2",
+          "label": "Color",
+          "constraints": [
+            "VAL"
+          ]
+        }
+      }
+    },
+    "Information.Make.Make": {
+      "id": "LDC_KAIROS_rel_019",
+      "full_type": "Information.Make.Make",
+      "type": "Information",
+      "subtype": "Make",
+      "subsubtype": "Make",
+      "definition": "The relation between a thing (such as an artifact, vehicle, or weapon) and its make or brand (string)",
+      "template": "<arg1> has make/brand <arg2>",
+      "args": {
+        "EntityOrFiller": {
+          "position": "arg1",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Brand": {
+          "position": "arg2",
+          "label": "Brand",
+          "constraints": [
+            "ORG",
+            "VAL"
+          ]
+        }
+      }
+    },
+    "Measurement.Size.Count": {
+      "id": "LDC_KAIROS_rel_020",
+      "full_type": "Measurement.Size.Count",
+      "type": "Measurement",
+      "subtype": "Size",
+      "subsubtype": "Count",
+      "definition": "Numerical totals of a countable entity or filler",
+      "template": "<arg1> is the count/number of <arg2>",
+      "args": {
+        "Measurement": {
+          "position": "arg1",
+          "label": "Measurement",
+          "constraints": [
+            "VAL"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "MHI",
+            "AML",
+            "ABS",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "Measurement.Size.HeightLengthWidth": {
+      "id": "LDC_KAIROS_rel_021",
+      "full_type": "Measurement.Size.HeightLengthWidth",
+      "type": "Measurement",
+      "subtype": "Size",
+      "subsubtype": "HeightLengthWidth",
+      "definition": "Numerical value of a dimension of an entity or filler",
+      "template": "<arg1> is the height/length/width of <arg2>",
+      "args": {
+        "Measurement": {
+          "position": "arg1",
+          "label": "Measurement",
+          "constraints": [
+            "VAL"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "GPE",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "MHI",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "Measurement.Size.Percentage": {
+      "id": "LDC_KAIROS_rel_022",
+      "full_type": "Measurement.Size.Percentage",
+      "type": "Measurement",
+      "subtype": "Size",
+      "subsubtype": "Percentage",
+      "definition": "Percentage value of an entity or filler (such as results)",
+      "template": "<arg1> is the percentage of <arg2>",
+      "args": {
+        "Measurement": {
+          "position": "arg1",
+          "label": "Measurement",
+          "constraints": [
+            "VAL"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "LAW",
+            "RES",
+            "MHI",
+            "AML",
+            "ABS",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "Measurement.Size.Unspecified": {
+      "id": "LDC_KAIROS_rel_023",
+      "full_type": "Measurement.Size.Unspecified",
+      "type": "Measurement",
+      "subtype": "Size",
+      "subsubtype": "Unspecified",
+      "definition": "Numerical value of the size of an entity or filler, not otherwise specified",
+      "template": "<arg1> is the size of <arg2>",
+      "args": {
+        "Measurement": {
+          "position": "arg1",
+          "label": "Measurement",
+          "constraints": [
+            "VAL"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "GPE",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MHI",
+            "AML",
+            "BOD",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "Measurement.Size.Weight": {
+      "id": "LDC_KAIROS_rel_024",
+      "full_type": "Measurement.Size.Weight",
+      "type": "Measurement",
+      "subtype": "Size",
+      "subsubtype": "Weight",
+      "definition": "Numerical value of the weight of an entity or filler",
+      "template": "<arg1> is the weight of <arg2>",
+      "args": {
+        "Measurement": {
+          "position": "arg1",
+          "label": "Measurement",
+          "constraints": [
+            "VAL"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "GPE",
+            "LOC",
+            "FAC",
+            "VEH",
+            "WEA",
+            "COM",
+            "BAL",
+            "MON",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.EmploymentMembership.Employment": {
+      "id": "LDC_KAIROS_rel_025",
+      "full_type": "OrganizationAffiliation.EmploymentMembership.Employment",
+      "type": "OrganizationAffiliation",
+      "subtype": "EmploymentMembership",
+      "subsubtype": "Employment",
+      "definition": "The relationship between a person and the organization or GPE of which the agent is an employee, or with which the agent has a contractual business or service agreement",
+      "template": "<arg1> is employed by <arg2>",
+      "args": {
+        "Employee": {
+          "position": "arg1",
+          "label": "Employee",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmployment": {
+          "position": "arg2",
+          "label": "PlaceOfEmployment",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.EmploymentMembership.Membership": {
+      "id": "LDC_KAIROS_rel_026",
+      "full_type": "OrganizationAffiliation.EmploymentMembership.Membership",
+      "type": "OrganizationAffiliation",
+      "subtype": "EmploymentMembership",
+      "subsubtype": "Membership",
+      "definition": "The relationship between a person and the organization or GPE of which the agent is an member, or with which the agent has a membership agreement",
+      "template": "<arg1> is a member of <arg2>",
+      "args": {
+        "Member": {
+          "position": "arg1",
+          "label": "Member",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfMembership": {
+          "position": "arg2",
+          "label": "PlaceOfMembership",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.EmploymentMembership.Unspecified": {
+      "id": "LDC_KAIROS_rel_027",
+      "full_type": "OrganizationAffiliation.EmploymentMembership.Unspecified",
+      "type": "OrganizationAffiliation",
+      "subtype": "EmploymentMembership",
+      "subsubtype": "Unspecified",
+      "definition": "The relationship between a person and the organization or GPE of which the agent is an employee or member, or with which the agent has a contractual business or service agreement, where the context does not distinguish whether the relationship is employment or membership",
+      "template": "<arg1> is a member of/employed by <arg2>",
+      "args": {
+        "EmployeeMember": {
+          "position": "arg1",
+          "label": "EmployeeMember",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "PlaceOfEmploymentMembership": {
+          "position": "arg2",
+          "label": "PlaceOfEmploymentMembership",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.Founder.Founder": {
+      "id": "LDC_KAIROS_rel_028",
+      "full_type": "OrganizationAffiliation.Founder.Founder",
+      "type": "OrganizationAffiliation",
+      "subtype": "Founder",
+      "subsubtype": "Founder",
+      "definition": "This relation captures a person entity and the organization founded by that person",
+      "template": "<arg1> is a founder of <arg2>",
+      "args": {
+        "Founder": {
+          "position": "arg1",
+          "label": "Founder",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Organization": {
+          "position": "arg2",
+          "label": "Organization",
+          "constraints": [
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.Leadership.Government": {
+      "id": "LDC_KAIROS_rel_029",
+      "full_type": "OrganizationAffiliation.Leadership.Government",
+      "type": "OrganizationAffiliation",
+      "subtype": "Leadership",
+      "subsubtype": "Government",
+      "definition": "The relationship between a person and a governmental organization or GPE led by that person (who is not the head of state)",
+      "template": "<arg1> is a leader of <arg2>",
+      "args": {
+        "Leader": {
+          "position": "arg1",
+          "label": "Leader",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "GovernmentBodyOrGPE": {
+          "position": "arg2",
+          "label": "GovernmentBodyOrGPE",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.Leadership.HeadOfState": {
+      "id": "LDC_KAIROS_rel_030",
+      "full_type": "OrganizationAffiliation.Leadership.HeadOfState",
+      "type": "OrganizationAffiliation",
+      "subtype": "Leadership",
+      "subsubtype": "HeadOfState",
+      "definition": "The relationship between a person and a country GPE led by that person",
+      "template": "<arg1> is a leader of <arg2>",
+      "args": {
+        "Leader": {
+          "position": "arg1",
+          "label": "Leader",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Country": {
+          "position": "arg2",
+          "label": "Country",
+          "constraints": [
+            "GPE"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.Leadership.MilitaryPolice": {
+      "id": "LDC_KAIROS_rel_031",
+      "full_type": "OrganizationAffiliation.Leadership.MilitaryPolice",
+      "type": "OrganizationAffiliation",
+      "subtype": "Leadership",
+      "subsubtype": "MilitaryPolice",
+      "definition": "The relationship between a person and a military or police organization led by that person",
+      "template": "<arg1> is a leader of <arg2>",
+      "args": {
+        "Leader": {
+          "position": "arg1",
+          "label": "Leader",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "MilitaryPoliceORG": {
+          "position": "arg2",
+          "label": "MilitaryPoliceORG",
+          "constraints": [
+            "ORG"
+          ]
+        }
+      }
+    },
+    "OrganizationAffiliation.Leadership.Unspecified": {
+      "id": "LDC_KAIROS_rel_032",
+      "full_type": "OrganizationAffiliation.Leadership.Unspecified",
+      "type": "OrganizationAffiliation",
+      "subtype": "Leadership",
+      "subsubtype": "Unspecified",
+      "definition": "The relationship between a person and an organization or GPE led by that person, where the context does not distinguish the nature of the organization",
+      "template": "<arg1> is a leader of <arg2>",
+      "args": {
+        "Leader": {
+          "position": "arg1",
+          "label": "Leader",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Organization": {
+          "position": "arg2",
+          "label": "Organization",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "PartWhole.Subsidiary.NationalityCitizen": {
+      "id": "LDC_KAIROS_rel_033",
+      "full_type": "PartWhole.Subsidiary.NationalityCitizen",
+      "type": "PartWhole",
+      "subtype": "Subsidiary",
+      "subsubtype": "NationalityCitizen",
+      "definition": "The ownership, administrative, and other hierarchical relationships between organizations and GPEs, and between governmental organizations and their parent GPE",
+      "template": "<arg1> is a subsidiary of <arg2>",
+      "args": {
+        "Subsidiary": {
+          "position": "arg1",
+          "label": "Subsidiary",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Parent": {
+          "position": "arg2",
+          "label": "Parent",
+          "constraints": [
+            "GPE"
+          ]
+        }
+      }
+    },
+    "PartWhole.Subsidiary.OrganizationSubsidiary": {
+      "id": "LDC_KAIROS_rel_034",
+      "full_type": "PartWhole.Subsidiary.OrganizationSubsidiary",
+      "type": "PartWhole",
+      "subtype": "Subsidiary",
+      "subsubtype": "OrganizationSubsidiary",
+      "definition": "The ownership, administrative, and other hierarchical relationships between organizations, including relationships between a department within an organization and the organization itself, and between a company and its parent company",
+      "template": "<arg1> is a subsidiary of <arg2>",
+      "args": {
+        "Subsidiary": {
+          "position": "arg1",
+          "label": "Subsidiary",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Parent": {
+          "position": "arg2",
+          "label": "Parent",
+          "constraints": [
+            "ORG"
+          ]
+        }
+      }
+    },
+    "PartWhole.Subsidiary.Unspecified": {
+      "id": "LDC_KAIROS_rel_035",
+      "full_type": "PartWhole.Subsidiary.Unspecified",
+      "type": "PartWhole",
+      "subtype": "Subsidiary",
+      "subsubtype": "Unspecified",
+      "definition": "The ownership, administrative, and other hierarchical relationships between organizations and GPEs, where the context does not make it clear whether the parent in the hierarchy is an organization or a GPE",
+      "template": "<arg1> is a subsidiary of <arg2>",
+      "args": {
+        "Subsidiary": {
+          "position": "arg1",
+          "label": "Subsidiary",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        },
+        "Parent": {
+          "position": "arg2",
+          "label": "Parent",
+          "constraints": [
+            "GPE",
+            "ORG"
+          ]
+        }
+      }
+    },
+    "PersonalSocial.Relationship.Political": {
+      "id": "LDC_KAIROS_rel_036",
+      "full_type": "PersonalSocial.Relationship.Political",
+      "type": "PersonalSocial",
+      "subtype": "Relationship",
+      "subsubtype": "Political",
+      "definition": "Otherwise unspecified political relationship between a person and another person",
+      "template": "<arg1> has political relationship with <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg2",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        }
+      }
+    },
+    "PersonalSocial.Relationship.Unspecified": {
+      "id": "LDC_KAIROS_rel_037",
+      "full_type": "PersonalSocial.Relationship.Unspecified",
+      "type": "PersonalSocial",
+      "subtype": "Relationship",
+      "subsubtype": "Unspecified",
+      "definition": "Otherwise unspecified relationship between a person and another person",
+      "template": "<arg1> has unspecified relationship with <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg2",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        }
+      }
+    },
+    "PersonalSocial.Role.ProfessionalRole": {
+      "id": "LDC_KAIROS_rel_038",
+      "full_type": "PersonalSocial.Role.ProfessionalRole",
+      "type": "PersonalSocial",
+      "subtype": "Role",
+      "subsubtype": "ProfessionalRole",
+      "definition": "The relationship between a person and their position or occupation",
+      "template": "<arg1> has a job role of <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg1",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "JobRole": {
+          "position": "arg2",
+          "label": "JobRole",
+          "constraints": [
+            "TTL"
+          ]
+        }
+      }
+    },
+    "PersonalSocial.Role.TitleFormOfAddress": {
+      "id": "LDC_KAIROS_rel_039",
+      "full_type": "PersonalSocial.Role.TitleFormOfAddress",
+      "type": "PersonalSocial",
+      "subtype": "Role",
+      "subsubtype": "TitleFormOfAddress",
+      "definition": "The relationship between a person and their title or honorific",
+      "template": "<arg1> has a title of <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg1",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Title": {
+          "position": "arg2",
+          "label": "Title",
+          "constraints": [
+            "TTL"
+          ]
+        }
+      }
+    },
+    "PersonalSocial.Role.Unspecified": {
+      "id": "LDC_KAIROS_rel_040",
+      "full_type": "PersonalSocial.Role.Unspecified",
+      "type": "PersonalSocial",
+      "subtype": "Role",
+      "subsubtype": "Unspecified",
+      "definition": "The relationship between a person and their position, occupation, title, or honorific, where the context does not make it clear whether the role is a position or an honorific",
+      "template": "<arg1> has a role of <arg2>",
+      "args": {
+        "Person": {
+          "position": "arg1",
+          "label": "Person",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Role": {
+          "position": "arg2",
+          "label": "Role",
+          "constraints": [
+            "TTL"
+          ]
+        }
+      }
+    },
+    "Physical.LocatedNear.Surround": {
+      "id": "LDC_KAIROS_rel_041",
+      "full_type": "Physical.LocatedNear.Surround",
+      "type": "Physical",
+      "subtype": "LocatedNear",
+      "subsubtype": "Surround",
+      "definition": "An entity or filler physically surrounding a place",
+      "template": "<arg1> is surrounded by <arg2>",
+      "args": {
+        "Place": {
+          "position": "arg1",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        },
+        "EntityOrFiller": {
+          "position": "arg2",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "COM",
+            "VEH",
+            "WEA",
+            "FAC",
+            "BAL",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        }
+      }
+    },
+    "Physical.LocatedNear.Unspecified": {
+      "id": "LDC_KAIROS_rel_042",
+      "full_type": "Physical.LocatedNear.Unspecified",
+      "type": "Physical",
+      "subtype": "LocatedNear",
+      "subsubtype": "Unspecified",
+      "definition": "The physical location of an entity or filler",
+      "template": "<arg1> is located in or near <arg2>",
+      "args": {
+        "EntityOrFiller": {
+          "position": "arg1",
+          "label": "EntityOrFiller",
+          "constraints": [
+            "PER",
+            "COM",
+            "VEH",
+            "WEA",
+            "FAC",
+            "BAL",
+            "AML",
+            "BOD",
+            "NAT",
+            "PLA",
+            "PTH"
+          ]
+        },
+        "Place": {
+          "position": "arg2",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Physical.OrganizationHeadquarters.OrganizationHeadquarters": {
+      "id": "LDC_KAIROS_rel_043",
+      "full_type": "Physical.OrganizationHeadquarters.OrganizationHeadquarters",
+      "type": "Physical",
+      "subtype": "OrganizationHeadquarters",
+      "subsubtype": "OrganizationHeadquarters",
+      "definition": "The relation between the headquarters of an organization and the GPE, LOC, or FAC entity in which the headquarters are located",
+      "template": "<arg1> has headquarters in <arg2>",
+      "args": {
+        "Organization": {
+          "position": "arg1",
+          "label": "Organization",
+          "constraints": [
+            "ORG"
+          ]
+        },
+        "Place": {
+          "position": "arg2",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "Physical.Resident.Resident": {
+      "id": "LDC_KAIROS_rel_044",
+      "full_type": "Physical.Resident.Resident",
+      "type": "Physical",
+      "subtype": "Resident",
+      "subsubtype": "Resident",
+      "definition": "All GPE, LOC, and FAC entities in which a person entity has lived",
+      "template": "<arg1> is a resident of <arg2>",
+      "args": {
+        "Resident": {
+          "position": "arg1",
+          "label": "Resident",
+          "constraints": [
+            "PER"
+          ]
+        },
+        "Place": {
+          "position": "arg2",
+          "label": "Place",
+          "constraints": [
+            "LOC",
+            "GPE",
+            "FAC"
+          ]
+        }
+      }
+    },
+    "ResponsibilityBlame.AssignBlame.AssignBlame": {
+      "id": "LDC_KAIROS_rel_045",
+      "full_type": "ResponsibilityBlame.AssignBlame.AssignBlame",
+      "type": "ResponsibilityBlame",
+      "subtype": "AssignBlame",
+      "subsubtype": "AssignBlame",
+      "definition": "An entity blamed for an event",
+      "template": "<arg1> is blamed for <arg2>",
+      "args": {
+        "EntityResponsible": {
+          "position": "arg1",
+          "label": "EntityResponsible",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Event": {
+          "position": "arg2",
+          "label": "Event",
+          "constraints": [
+            "EVENT"
+          ]
+        }
+      }
+    },
+    "ResponsibilityBlame.ClaimResponsibility.ClaimResponsibility": {
+      "id": "LDC_KAIROS_rel_046",
+      "full_type": "ResponsibilityBlame.ClaimResponsibility.ClaimResponsibility",
+      "type": "ResponsibilityBlame",
+      "subtype": "ClaimResponsibility",
+      "subsubtype": "ClaimResponsibility",
+      "definition": "An entity claiming responsibility for an event",
+      "template": "<arg1> claims responsibility for <arg2>",
+      "args": {
+        "EntityResponsible": {
+          "position": "arg1",
+          "label": "EntityResponsible",
+          "constraints": [
+            "PER",
+            "ORG",
+            "GPE",
+            "SID"
+          ]
+        },
+        "Event": {
+          "position": "arg2",
+          "label": "Event",
+          "constraints": [
+            "EVENT"
+          ]
+        }
+      }
+    }
+  }
+}

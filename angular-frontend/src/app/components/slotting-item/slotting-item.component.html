@@ -1,0 +1,97 @@
+<td class="col-1"><input type="checkbox" [(ngModel)]="event.is_checked" /></td>
+<td class="col-2">E{{ event.id_num }}</td>
+<td class="col-6">
+  {{ event.event_text }} <br />
+  <b>Event Primitive :</b> {{ event.event_primitive }}
+</td>
+<td class="col-3">
+  <ul>
+    <li *ngFor="let arg of event.args">
+      <div class="arg-unit">
+        {{ arg.role }} , <b>{{ arg.refvar }}</b> <br />
+        [{{ arg.constraints }}] <span id="delete-slot" (click)="deleteSlot(arg.role, arg.refvar)">&times;</span
+        ><span
+          id="edit-slot"
+          (click)="onClickOpen(arg)"
+          data-toggle="modal"
+          [attr.data-target]="'#arg-popup' + event.id_num"
+          >edit</span
+        >
+      </div>
+    </li>
+  </ul>
+</td>
+
+<!-- Edit Arg Popup -->
+<div
+  #popup
+  class="modal fade"
+  [attr.id]="'arg-popup' + event.id_num"
+  tabindex="-1"
+  role="dialog"
+  data-backdrop="false"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <form>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Edit argument roles</div>
+          <button type="button" (click)="onClickClose()" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label [attr.for]="'role-select' + event.id_num">Role:</label>
+            <select name="role-select" [attr.id]="'role-select' + event.id_num" class="form-control" [(ngModel)]="role">
+              <option value="" disabled selected>Select role</option>
+              <ng-container *ngIf="primitive">
+                <option *ngFor="let arg of primitive.args" value="{{ arg.role }}">{{ arg.role }}</option>
+              </ng-container>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label [attr.for]="'refvar-name' + event.id_num">Refvar name:</label>
+            <input
+              type="text"
+              class="form-control"
+              [attr.id]="'refvar-name' + event.id_num"
+              name="refvar-name"
+              [(ngModel)]="refvar"
+              placeholder="Enter refvar name here"
+            />
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="role == null; else showConstraints">Select role to display constraints.</div>
+            <ng-template #showConstraints>
+              <label [attr.for]="'common-constraints' + event.id_num">Select constraints to assign</label>
+              <select
+                [attr.id]="'common-constraints' + event.id_num"
+                name="common-constraints"
+                multiple
+                class="form-control"
+                [(ngModel)]="constraints"
+                [attr.multiple]="'multiple' + event.id_num"
+              >
+                <option *ngFor="let constraint of getCommonConstraints()" value="{{ constraint }}">
+                  {{ constraint }}
+                </option>
+              </select>
+            </ng-template>
+          </div>
+
+          <div class="form-group"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" (click)="saveSlot()">
+              Save argument
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

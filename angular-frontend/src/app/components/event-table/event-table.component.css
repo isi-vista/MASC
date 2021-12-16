@@ -1,0 +1,5 @@
+.table-body {
+  display: block;
+  max-height: 60vh;
+  overflow-y: auto;
+}
